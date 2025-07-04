@@ -2,11 +2,10 @@
 @import "tailwindcss";
 
 body {
-    background: #0A0A0A;
+    /*background: #0A0A0A;*/
     font-family: "Funnel Display", sans-serif;
     color: white;
     scroll-behavior: smooth;
-    overflow-x: hidden;
     padding: 0px;
     margin: 0px;
 }

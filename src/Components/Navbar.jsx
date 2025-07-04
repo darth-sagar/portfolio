@@ -1,35 +1,49 @@
-import React ,{useState} from 'react'
+import React, { useState} from 'react'
 import logo from '../Assets/logo.svg'
 import { IoMoonOutline } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
+import { LuSunDim } from "react-icons/lu";
+import {useGSAP} from '@gsap/react';
+import gsap from "gsap";
+import {useDarkTheme} from '../Context/Context.jsx';
+
 export const Navbar = () => {
+    const {darkTheme, setDarkTheme}= useDarkTheme();
     const [isOpen, setIsOpen] = useState(false);
-    const [theme, setTheme] = useState('light');
+    useGSAP(()=>{
+        gsap.to("#themebutton", {
+            rotate: 360,
+            duration: 1,
+            ease: "back.inOut",
+        })
+    },[darkTheme])
+
     const clickChangeTheme=()=>{
-        setTheme('dark');
+        setDarkTheme(prev=>!prev);
+
     }
     const clickOpenMenu = () => {
         setIsOpen(!isOpen);
     }
     return (
         <>
-            <div className={"flex flex-col items-center justify-center h-[16vh] w-full bg-amber-800"}>
-                <nav className={"w-[92vw] h-[10vh] flex items-center justify-between bg-amber-400 shadow-md px-4"}>
-                    <div>
-                        <img src={logo} alt="Logo" className="w-10 h-10" />
+            <div className={` fixed flex flex-col items-center justify-center h-[16vh] w-full`}>
+                <nav className={"w-[92vw] h-[10vh] flex items-center justify-between px-4"}>
+                    <div className={`${darkTheme?  "" : "border-black"} bg-white rounded-full w-12 h-12 flex items-center justify-center`}>
+                        <img src={logo} alt="Logo" className="w-10 h-10 " />
                     </div>
-                    <div className={"space-x-8 hidden md:flex"}>
-                        <button>About</button>
-                        <button>Work</button>
-                        <button>Contact</button>
-                        <button onclick={clickChangeTheme}>
-                            <div className={'w-10 h-10 flex flex-col items-center justify-center rounded-full text-black bg-white'}>
-                                <IoMoonOutline />
+                    <div className={`${darkTheme ? "text-white" : "text-black"} space-x-8 hidden md:flex text-lg`}>
+                        <button>ABOUT</button>
+                        <button>WORK</button>
+                        <button>CONTACT</button>
+                        <button >
+                            <div  onClick={clickChangeTheme}  className={`${darkTheme ? "bg-white text-black" : "bg-black text-white"} w-12 h-12 flex flex-col items-center justify-center rounded-full text-black `} >
+                                {darkTheme? <LuSunDim id="themebutton" /> :<IoMoonOutline id="themebutton" /> }
                             </div>
                         </button>
                     </div>
-                    <button onClick={clickOpenMenu} className={"md:hidden text-black button z-20 text-3xl"}>{
+                    <button  onClick={clickOpenMenu} className={"md:hidden text-white button z-20 text-3xl"}>{
                         isOpen? <RxCross2 />  :<GiHamburgerMenu />
                     }
                     </button>
@@ -44,8 +58,8 @@ export const Navbar = () => {
                             <button>Work</button>
                             <button>Contact</button>
                             <button>
-                                <div className={'w-12 h-12 flex flex-col items-center justify-center rounded-full text-black bg-white'}>
-                                    <IoMoonOutline />
+                                <div id="themebutton" className={'w-12 h-12 flex flex-col items-center justify-center rounded-full text-black bg-white'} onClick={clickChangeTheme}>
+                                    {darkTheme?<IoMoonOutline id="themebutton" />:<LuSunDim id="themebutton"/>}
                                 </div>
                             </button>
                         </div>
