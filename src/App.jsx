@@ -8,7 +8,7 @@ const App = () => {
     return (
         <div>
             <div className={`w-full h-screen ${darkTheme ? "bg-[#0A0A0A]" : "bg-white"} `}>
-                <Navbar />
+                {/*<Navbar />*/}
                 <Hero/>
             </div>
         </div>
