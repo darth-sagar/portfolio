@@ -20,9 +20,9 @@ const App = () => {
     return (
         <div>
             <div className={`w-full h-screen ${darkTheme ? "bg-[#0A0A0A]" : "bg-white"} `}>
-                <LandingPage />
+                {/*<LandingPage />*/}
                 {homePage &&<Navbar />}
-                {/* <Hero /> */}
+                 <Hero />
             </div>
         </div>
     )

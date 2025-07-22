@@ -39,7 +39,7 @@ export const Navbar = () => {
         <>
             <div id={"navbar"} className={`absolute flex flex-col items-center justify-center h-[16vh] w-full`}>
                 <nav className={"w-[92vw] h-[10vh] flex items-center justify-between px-4"}>
-                    <div className={`${darkTheme?  "" : "border-black"} bg-white rounded-full w-12 h-12 flex items-center justify-center`}>
+                    <div className={`${darkTheme?  "" : "border-black"} bg-white rounded-full w-12 h-12 flex items-center justify-center z-10`}>
                         <img src={logo} alt="Logo" className="w-10 h-10 " />
                     </div>
                     <div className={`${darkTheme ? "text-white" : "text-black"} space-x-8 hidden md:flex text-lg`}>
