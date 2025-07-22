@@ -8,7 +8,6 @@ const App = () => {
     const { darkTheme } = useDarkTheme();
     return (
         <div>
-
             <div className={`w-full h-screen ${darkTheme ? "bg-[#0A0A0A]" : "bg-white"} `}>
                 <LandingPage />
                 {/*<Navbar />*/}
