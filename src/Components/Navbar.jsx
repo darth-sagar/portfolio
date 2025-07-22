@@ -11,6 +11,7 @@ import {useDarkTheme} from '../Context/Context.jsx';
 export const Navbar = () => {
     const {darkTheme, setDarkTheme}= useDarkTheme();
     const [isOpen, setIsOpen] = useState(false);
+
     useGSAP(()=>{
         gsap.to("#themebutton", {
             rotate: 360,
@@ -18,6 +19,14 @@ export const Navbar = () => {
             ease: "back.inOut",
         })
     },[darkTheme])
+
+    useGSAP(()=>{
+        gsap.from("#navbar", {
+            duration: 1,
+            opacity:0,
+            ease: "power1.inOut",
+        })
+    },[])
 
     const clickChangeTheme=()=>{
         setDarkTheme(prev=>!prev);
@@ -28,7 +37,7 @@ export const Navbar = () => {
     }
     return (
         <>
-            <div className={`absolute flex flex-col items-center justify-center h-[16vh] w-full`}>
+            <div id={"navbar"} className={`absolute flex flex-col items-center justify-center h-[16vh] w-full`}>
                 <nav className={"w-[92vw] h-[10vh] flex items-center justify-between px-4"}>
                     <div className={`${darkTheme?  "" : "border-black"} bg-white rounded-full w-12 h-12 flex items-center justify-center`}>
                         <img src={logo} alt="Logo" className="w-10 h-10 " />
