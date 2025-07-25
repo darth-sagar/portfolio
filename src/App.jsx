@@ -3,8 +3,6 @@ import { Navbar } from './Components/Navbar.jsx'
 import Hero from "./Components/Hero.jsx"
 import { useDarkTheme } from './Context/Context.jsx';
 import LandingPage from './Pages/LandingPage.jsx';
-import {useGSAP} from '@gsap/react';
-import gsap from 'gsap';
 
 const App = () => {
     const { darkTheme } = useDarkTheme();
@@ -20,7 +18,7 @@ const App = () => {
     return (
         <div>
             <div className={`w-full h-screen ${darkTheme ? "bg-[#0A0A0A]" : "bg-white"} `}>
-                {/*<LandingPage />*/}
+                <LandingPage />
                 {homePage &&<Navbar />}
                  <Hero />
             </div>
