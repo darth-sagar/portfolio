@@ -4,11 +4,10 @@ import gsap from 'gsap';
 const LandingPage = () => {
   useGSAP(()=>{
     gsap.to("#landingPage", {
-
-        scale:20,
+        scale:15,
         opacity: 0,
-        duration: 5,
-        ease: "power1.inOut",
+        duration: 4,
+        ease: "power3.inOut"
     })
   })
   useGSAP(()=>{
@@ -28,13 +27,13 @@ const LandingPage = () => {
     })
   })
   return (
-    <div id={'landingPage'} className={'w-full h-full flex justify-center items-center absolute bg-[#0A0A0A] overflow-hidden'} >
+    <div id={'landingPage'} className={'w-svw h-full flex justify-center items-center absolute bg-[#0A0A0A] overflow-hidden'} >
       <div id={"left"} className={'h-full w-1 bg-[#FF4D4D] relative right-[140px] rotate-6'}></div>
       <div id={"left"} className={'h-full w-1 bg-[#FF4D4D] relative right-[40px] rotate-6 md:right-[40px]'}></div>
       <div >
         <h1 className={'text-lg md:text-[7rem]'}>Welcome</h1>
       </div>
-      <div id={"right"}className={'h-full w-1 bg-[#FF4D4D] relative left-[140px] rotate-6'}></div>
+      <div id={"right"} className={'h-full w-1 bg-[#FF4D4D] relative left-[140px] rotate-6'}></div>
       <div id={"right"} className={'h-full w-1 bg-[#FF4D4D] relative left-[40px] rotate-6 md:left-[40px]'}></div>
     </div>
   )
