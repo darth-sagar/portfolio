@@ -17,10 +17,11 @@ const App = () => {
 
     return (
         <div>
-            <div className={`w-full h-screen ${darkTheme ? "bg-[#0A0A0A]" : "bg-white"} `}>
-                <LandingPage />
-                {homePage &&<Navbar />}
+            <div className={`w-full ${darkTheme ? "bg-[#0A0A0A]" : "bg-white"} `}>
+                {/*{homePage &&<Navbar />}*/}
                  <Hero />
+                <LandingPage />
+
             </div>
         </div>
     )
