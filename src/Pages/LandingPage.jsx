@@ -2,6 +2,7 @@ import React from 'react'
 import {useGSAP} from '@gsap/react';
 import gsap from 'gsap';
 const LandingPage = () => {
+
   useGSAP(()=>{
     gsap.to("#landingPage", {
         scale:15,
@@ -27,7 +28,7 @@ const LandingPage = () => {
     })
   })
   return (
-    <div id={'landingPage'} className={'w-svw h-full flex justify-center items-center absolute bg-[#0A0A0A] overflow-hidden'} >
+    <div id={'landingPage'} className={'w-svw h-full flex justify-center items-center absolute bg-[#0A0A0A]'} >
       <div id={"left"} className={'h-full w-1 bg-[#FF4D4D] relative right-[140px] rotate-6'}></div>
       <div id={"left"} className={'h-full w-1 bg-[#FF4D4D] relative right-[40px] rotate-6 md:right-[40px]'}></div>
       <div >
