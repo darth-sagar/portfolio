@@ -24,9 +24,7 @@ const Aboutme = () => {
             },
             ease:"power1.inOut",
             stagger:0.5,
-         })
-        },[])
-    useGSAP(()=>{
+         });
         gsap.from("#seconddiv p",{
             x:-30,
             opacity:0,
@@ -40,9 +38,7 @@ const Aboutme = () => {
             },
             ease:"power1.inOut",
             stagger:0.15,
-        })
-    },[])
-    useGSAP(()=>{
+        });
         gsap.from("#thirddiv",{
             x:-30,
             opacity:0,
@@ -55,10 +51,7 @@ const Aboutme = () => {
                 end:"top 50%",
             },
             ease:"power1.inOut"
-        })
-    },[])
-
-    useGSAP(()=>{
+        });
         gsap.from("#fifthdiv",{
             x:50,
             opacity:0,
@@ -71,10 +64,7 @@ const Aboutme = () => {
                 end:"top 50%",
             },
             ease:"power1.inOut"
-        })
-    },[])
-
-    useGSAP(()=>{
+        });
         gsap.from("#skills1 h1",{
             y:50,
             opacity:0,
@@ -89,8 +79,6 @@ const Aboutme = () => {
             ease:"power1.inOut",
             stagger:1,
         })
-    },[])
-    useGSAP(()=>{
         gsap.from("#skills2 h1",{
             y:50,
             opacity:0,
@@ -104,9 +92,7 @@ const Aboutme = () => {
             },
             ease:"power1.inOut",
             stagger:1,
-        })
-    },[])
-    useGSAP(()=>{
+        });
         gsap.from("#skills3 h1",{
             y:50,
             opacity:0,
@@ -120,10 +106,7 @@ const Aboutme = () => {
             },
             ease:"power1.inOut",
             stagger:1,
-        })
-    },[])
-
-    useGSAP(()=>{
+        });
         gsap.from("#lastdiv h1",{
             x:50,
             opacity:0,
@@ -137,9 +120,7 @@ const Aboutme = () => {
             },
             ease:"power1.inOut",
             stagger:0.8,
-        })
-    },[])
-    useGSAP(()=>{
+        });
         gsap.from("#fourthdiv",{
             y:50,
             opacity:0,
@@ -153,7 +134,7 @@ const Aboutme = () => {
             },
             ease:"power1.inOut",
             stagger:0.8,
-        })
+        });
     },[])
     return (
 
@@ -190,13 +171,13 @@ const Aboutme = () => {
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4'} >Next.js</h1>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4'} >Node.Js</h1>
             </div>
-            <div id={'skills3'}className={'flex flex-row space-x-2 text-[1.2rem] mt-2'}>
+            <div id={'skills3'} className={'flex flex-row space-x-2 text-[1.2rem] mt-2'}>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4'} >MongoDB</h1>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4'}>MySQL</h1>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4'} >Python</h1>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4'} >c++</h1>
             </div>
-            <div id={'lastdiv'}className={'mt-5'}>
+            <div id={'lastdiv'} className={'mt-5'}>
                 <h1 className={'text-2xl mb-3'}>Sevices</h1>
                 <h1 className={'flex flex-row items-center'}><FaArrowRightLong className={'text-[#FF4D4D]'}/> <p className={'pl-2'}>Full Stack Application Development</p> </h1>
                 <h1 className={'flex flex-row items-center'} ><FaArrowRightLong className={'text-[#FF4D4D]'}/> <p className={'pl-2'}>Web Design & Development</p> </h1>
