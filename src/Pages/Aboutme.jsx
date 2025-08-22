@@ -146,7 +146,7 @@ const Aboutme = () => {
             </div>
             <div id={"seconddiv"} className={'mt-5 text-xl'}>
                 <p className={'flex flex-row items-center'}><CiLocationOn className={'text-[#FF4D4D]'}/><p className={'pl-2'}>Based In Delhi, India</p> </p>
-                <p className={'flex flex-row items-center'} ><IoIosCode className={'text-[#FF4D4D]'} /> <p className={'pl-2'}>Full Stack Developer </p> </p>
+                <p className={'flex flex-row items-center'} ><IoIosCode className={'text-[#FF4D4D]'} /> <p className={'pl-2'}>Web Developer </p> </p>
             </div>
             <div id={"thirddiv"} className={'w-1/2 pt-3'}>
                 <h4>With a passion for building complete web solutions, I bring together clean UI design, efficient backend logic, and emerging AI/ML capabilities to create smart, adaptable, and user-focused applications</h4>
