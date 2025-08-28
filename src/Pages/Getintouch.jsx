@@ -11,7 +11,6 @@ gsap.registerPlugin(ScrollTrigger)
 
 const Getintouch = () => {
 
-
     return (
         <div className={`mb-5`}>
             <div id={'text'} className={'flex flex-col justify-center items-center w-full h-svh'}>
@@ -29,7 +28,7 @@ const Getintouch = () => {
                         <a className={'text-4xl rounded-xl border-2 border-b-gray-500 p-2 '} href={'mailto:work.sagarsaini@gmai.com?subject=Inquiry&body=Hello, I have and inquiry.'} target={"_blank"}> <button><IoMailOutline /></button> </a>
                     </div>
                 </div>
-                <div>
+                <div className={`pr-5`}>
                     <form>
                         <input className={'text-lg w-full mb-5 rounded-sm border-2 border-gray-500/10 p-3'} type={'text'} placeholder={'Name'}  />
                         <input className={'text-lg w-full mb-5 rounded-sm border-2 border-gray-500/10 p-3'} type={'email'} placeholder={'Email'}/>
