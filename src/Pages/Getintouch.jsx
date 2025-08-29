@@ -23,7 +23,7 @@ const Getintouch = () => {
                 <div className={`ml-20 mb-10 w-1/2`}>
                     <h1 className={'text-2xl mb-5'}>Connect with Me</h1>
                     <div className={`flex flex-row space-x-5 items-center`}>
-                        <a className={'text-4xl rounded-xl border-2 border-b-gray-500 p-2'} href={'www.linkedin.com/in/sagar-saini-621b8a307'} target={'_blank'}> <button><CiLinkedin /></button> </a>
+                        <a className={'text-4xl rounded-xl border-2 border-b-gray-500 p-2'} href={'https://www.linkedin.com/in/sagar-saini-621b8a307/'} target={'_blank'}> <button><CiLinkedin /></button> </a>
                         <a className={'text-4xl rounded-xl border-2 border-b-gray-500 p-2 '} href={"https://github.com/darth-sagar"} target={'_blank'}> <button><FiGithub /></button> </a>
                         <a className={'text-4xl rounded-xl border-2 border-b-gray-500 p-2 '} href={'mailto:work.sagarsaini@gmai.com?subject=Inquiry&body=Hello, I have and inquiry.'} target={"_blank"}> <button><IoMailOutline /></button> </a>
                     </div>
