@@ -5,7 +5,6 @@ import { useDarkTheme } from './Context/Context.jsx';
 import LandingPage from './Pages/LandingPage.jsx';
 import Aboutme from './Pages/Aboutme.jsx';
 import {Footer} from './Components/Footer.jsx';
-import Getintouch from './Pages/Getintouch.jsx'
 
 const App = () => {
 
@@ -26,7 +25,7 @@ const App = () => {
                 {homePage && <Navbar />}
                  <Hero />
                 {homePage && <Aboutme />}
-                <Getintouch/>
+
                 <Footer/>
             </div>
         </div>
