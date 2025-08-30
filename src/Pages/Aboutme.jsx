@@ -2,6 +2,7 @@ import React from 'react'
 import { CiLocationOn } from "react-icons/ci";
 import { IoIosCode } from "react-icons/io";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { useDarkTheme } from '../Context/Context.jsx';
 import gsap from 'gsap';
 import {useGSAP} from '@gsap/react';
 import {ScrollTrigger} from 'gsap/all';
@@ -9,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 
 const Aboutme = () => {
+    const {darkTheme} = useDarkTheme();
 
     useGSAP(()=>{
         gsap.from("#namediv h1",{
@@ -141,18 +143,18 @@ const Aboutme = () => {
         <div className={'flex flex-col md:flex-row mt-20'}>
         <div className={'h-svh ml-8 mr-4 w-svw flex flex-col md:ml-48 md:mt-20 md:w-5/12'}>
             <div id={"namediv"}>
-                <h1 className={'text-5xl text-amber-100'}>Hi, I'm</h1>
+                <h1 className={`${darkTheme ? "text-amber-100" : "text-black" } text-5xl `}>Hi, I'm</h1>
                 <h1 className={'text-5xl text-[#FF4D4D]'}>Sagar saini</h1>
             </div>
             <div id={"seconddiv"} className={'mt-5 text-xl'}>
-                <p className={'flex flex-row items-center'}><CiLocationOn className={'text-[#FF4D4D]'}/><p className={'pl-2'}>Based In Delhi, India</p> </p>
-                <p className={'flex flex-row items-center'} ><IoIosCode className={'text-[#FF4D4D]'} /> <p className={'pl-2'}>Web Developer </p> </p>
+                <p className={'flex flex-row items-center'}><CiLocationOn className={'text-[#FF4D4D]'}/><p className={`pl-2 ${darkTheme? "" :"text-black"}`}>Based In Delhi, India</p> </p>
+                <p className={'flex flex-row items-center'} ><IoIosCode className={'text-[#FF4D4D]'} /> <p className={`pl-2 ${darkTheme? "" :"text-black"} `}>Web Developer </p> </p>
             </div>
-            <div id={"thirddiv"} className={'w-1/2 pt-3'}>
+            <div id={"thirddiv"} className={`w-1/2 pt-3 ${darkTheme? "" :"text-black"}`}>
                 <h4>With a passion for building complete web solutions, I bring together clean UI design, efficient backend logic, and emerging AI/ML capabilities to create smart, adaptable, and user-focused applications</h4>
             </div>
-            <div id={"fourthdiv"} className={'mt-8'}>
-                <button className={'rounded-xl bg-[#FF4D4D] p-4 mr-5 border-2 border-amber-50'}>Get In Touch</button>
+            <div id={"fourthdiv"} className={` ${darkTheme? "" :"text-black"} mt-8`}>
+                <button className={`rounded-xl bg-[#FF4D4D] p-4 mr-5 border-2 border-amber-50 ${darkTheme? "border-amber-50":"border-black"}`}>Get In Touch</button>
                 <button className={'rounded-xl bg-transparent p-4 border-2 border-[#FF4D4D]'} >View Projects</button>
             </div>
         </div>
