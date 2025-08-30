@@ -131,8 +131,9 @@ const Aboutme = () => {
                 trigger:"#fourthdiv",
                 scroller:"body",
                 scrub:3,
-                start:"top 80%",
-                end:"top 50%",
+                start:"top 90%",
+                end:"top 75%",
+                markers:true,
             },
             ease:"power1.inOut",
             stagger:0.8,
@@ -161,25 +162,25 @@ const Aboutme = () => {
 
         <div className={'mt-30'}>
             <h1 id = {"fifthdiv"} className={'text-2xl mb-5'}>Key Skills</h1>
-            <div id={'skills1'} className={'flex flex-row space-x-2 text-[1.2rem]'}>
+            <div id={'skills1'} className={`flex flex-row space-x-2 text-[1.2rem] ${darkTheme? "" :"text-black"}`}>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4'}>HTML</h1>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 '} >CSS</h1>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4'} >Tailwind CSS</h1>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4'} >JavaScript</h1>
             </div>
-            <div id={'skills2'} className={'flex flex-row space-x-2 text-[1.2rem] mt-2'}>
+            <div id={'skills2'} className={`flex flex-row space-x-2 text-[1.2rem] mt-2 ${darkTheme? "" :"text-black"}`}>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4'} >TypeScript</h1>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4'} >React</h1>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4'} >Next.js</h1>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4'} >Node.Js</h1>
             </div>
-            <div id={'skills3'} className={'flex flex-row space-x-2 text-[1.2rem] mt-2'}>
+            <div id={'skills3'} className={`flex flex-row space-x-2 text-[1.2rem] mt-2 ${darkTheme? "" :"text-black"}`}>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4'} >MongoDB</h1>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4'}>MySQL</h1>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4'} >Python</h1>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4'} >c++</h1>
             </div>
-            <div id={'lastdiv'} className={'mt-5'}>
+            <div id={'lastdiv'} className={`mt-5 ${darkTheme? "" :"text-black"}`}>
                 <h1 className={'text-2xl mb-3'}>Sevices</h1>
                 <h1 className={'flex flex-row items-center'}><FaArrowRightLong className={'text-[#FF4D4D]'}/> <p className={'pl-2'}>Full Stack Application Development</p> </h1>
                 <h1 className={'flex flex-row items-center'} ><FaArrowRightLong className={'text-[#FF4D4D]'}/> <p className={'pl-2'}>Web Design & Development</p> </h1>
