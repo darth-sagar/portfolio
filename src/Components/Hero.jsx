@@ -40,15 +40,18 @@ const Hero = () => {
             y:100,
         })
     },[])
-    useGSAP(()=>{
-        gsap.from("#text",{
-            y:350,
-            opacity:0,
-            duration:1,
-            stagger:0.5,
-            delay:1.1,
-        })
-    })
+    useGSAP(() => {
+        gsap.from("#text", {
+            opacity: 0,
+            y: 180,
+            rotateX: -90,
+            duration: 1.2,
+            stagger: 0.25,
+            ease: "back.out(1.7)",
+            delay: 1.4,
+        });
+    });
+
 
     return (
         <div className={'h-svh overflow-y-hidden overflow-x-hidden md:h-svh'}>

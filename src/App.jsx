@@ -5,6 +5,7 @@ import { useDarkTheme } from './Context/Context.jsx';
 import LandingPage from './Pages/LandingPage.jsx';
 import Aboutme from './Pages/Aboutme.jsx';
 import {Footer} from './Components/Footer.jsx';
+import ProjectsSection from './Components/projects.jsx';
 
 const App = () => {
 
@@ -25,7 +26,7 @@ const App = () => {
                 {homePage && <Navbar />}
                  <Hero />
                 {homePage && <Aboutme />}
-
+                <ProjectsSection />
                 <Footer/>
             </div>
         </div>

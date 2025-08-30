@@ -7,10 +7,25 @@ import { LuSunDim } from "react-icons/lu";
 import {useGSAP} from '@gsap/react';
 import gsap from "gsap";
 import {useDarkTheme} from '../Context/Context.jsx';
+import { useEffect } from "react";
 
 export const Navbar = () => {
     const {darkTheme, setDarkTheme}= useDarkTheme();
     const [isOpen, setIsOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     useGSAP(()=>{
         gsap.to("#themebutton", {
@@ -32,12 +47,15 @@ export const Navbar = () => {
         setDarkTheme(prev=>!prev);
 
     }
+
     const clickOpenMenu = () => {
         setIsOpen(prev=>!prev);
     }
+
     return (
         <>
-            <div id={"navbar"} className={`absolute flex flex-col items-center justify-center h-[16vh] w-full`}>
+            <div id={"navbar"} className={`fixed flex flex-col items-center justify-center h-[16vh] w-full ${
+                scrolled ? " backdrop-blur-md " : "bg-transparent" } z-50`}>
                 <nav className={"w-[92vw] h-[10vh] flex items-center justify-between px-4"}>
                     <div className={`${darkTheme?  "" : "border-black"} bg-white rounded-full w-12 h-12 flex items-center justify-center z-10`}>
                         <img src={logo} alt="Logo" className="w-10 h-10 " />
