@@ -8,6 +8,9 @@ import {useGSAP} from '@gsap/react';
 import gsap from "gsap";
 import {useDarkTheme} from '../Context/Context.jsx';
 import { useEffect } from "react";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollToPlugin);
 
 export const Navbar = () => {
     const {darkTheme, setDarkTheme}= useDarkTheme();
@@ -81,7 +84,13 @@ export const Navbar = () => {
                     <>
 
                         <div className={ `${darkTheme ? "text-white"  : "text-black" } bg-black/30  md:hidden flex flex-col items-center justify-center space-y-5 w-full h-[100vh] absolute top-0 left-0 z-10`}>
-                            <button>About</button>
+                            <button onClick={() => {
+                                gsap.to(window, {
+                                    duration: 1,
+                                    scrollTo: "#about",
+                                    ease: "power2.inOut",
+                                });
+                            }} className={`hover:bg-white/20 transition`}>About</button>
                             <button>Work</button>
                             <button>Contact</button>
                             <button>

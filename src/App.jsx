@@ -1,6 +1,6 @@
 
 import Home from './Pages/home.jsx';
-import LandingPage from './Pages/LandingPage.jsx';
+import LandingPage from './Pages/LandingPage.jsx'
 
 const App = () => {
 

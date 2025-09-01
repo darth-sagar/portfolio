@@ -30,6 +30,14 @@ const projects = [
         github: "#", // TODO: replace with your repo link
         image: "https://via.placeholder.com/900x560.png?text=Pomodoro+Watch",
     },
+    {
+        title: "Pomodoro Watch",
+        description:
+            "Custom Arduino Pomodoro timer with IR reset, 50‑minute cycles, and 16x2 LCD display.",
+        tech: ["Arduino", "C++", "IR Sensor", "LCD 16x2"],
+        github: "#", // TODO: replace with your repo link
+        image: "https://via.placeholder.com/900x560.png?text=Pomodoro+Watch",
+    }
 ];
 
 export default function ProjectsSection() {
@@ -104,7 +112,7 @@ export default function ProjectsSection() {
     return (
         <section ref={containerRef} className="max-w-6xl mx-auto py-16 px-6">
             <h2 className="projects-title text-3xl md:text-4xl font-bold mb-12 text-center">
-                My Projects
+                Selected Work
             </h2>
 
             <div className="space-y-20">

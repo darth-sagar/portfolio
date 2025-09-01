@@ -6,6 +6,9 @@ import { useDarkTheme } from '../Context/Context.jsx';
 import gsap from 'gsap';
 import {useGSAP} from '@gsap/react';
 import {ScrollTrigger} from 'gsap/all';
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollToPlugin);
 gsap.registerPlugin(ScrollTrigger)
 
 
@@ -140,7 +143,7 @@ const Aboutme = () => {
     },[])
     return (
 
-        <div className={'flex flex-col md:flex-row mt-20'}>
+        <div id="about" className={'flex flex-col md:flex-row mt-20'}>
         <div className={'h-svh ml-8 mr-4 w-svw flex flex-col md:ml-48 md:mt-20 md:w-5/12'}>
             <div id={"namediv"}>
                 <h1 className={`${darkTheme ? "text-amber-100" : "text-black" } text-5xl `}>Hi, I'm</h1>
