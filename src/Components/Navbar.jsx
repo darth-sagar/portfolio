@@ -57,9 +57,9 @@ export const Navbar = () => {
 
     return (
         <>
-            <div id={"navbar"} className={`fixed flex flex-col items-center justify-center h-[16vh] ${
-                scrolled ? " backdrop-blur-md " : "bg-transparent" } z-30 mr-5`}>
-                <nav className={"w-[98vw] h-[10vh] flex items-center justify-between px-4"}>
+            <div id={"top"} className={`fixed flex flex-col items-center justify-center h-[16vh] ${
+                scrolled ? " backdrop-blur-md " : "bg-transparent" } z-30 mr-5 w-full`}>
+                <nav className={"w-[90vw] h-[10vh] flex items-center justify-between px-4"}>
                     <div className={`${darkTheme?  "" : "border-black"} bg-white rounded-full w-12 h-12 flex items-center justify-center z-20`}>
                         <img src={logo} alt="Logo" className="w-10 h-10" />
                     </div>
@@ -84,7 +84,7 @@ export const Navbar = () => {
                         <button onClick={() => {
                             gsap.to(window, {
                                 duration: 0.5,
-                                scrollTo: "#projectsection",
+                                scrollTo: { y: "#projectsection", autoKill: true },
                                 ease: "power2.inOut",
                             });
                         }} className={`hover:scale-105 relative
@@ -142,7 +142,13 @@ export const Navbar = () => {
                               after:transition-all 
                               after:duration-300 
                               hover:after:w-full`}>About</button>
-                            <button>Work</button>
+                            <button onClick={() => {
+                                gsap.to(window, {
+                                    duration: 0.5,
+                                    scrollTo: { y: "#projectsection", autoKill: true },
+                                    ease: "power2.inOut",
+                                });
+                            }} >Work</button>
                             <button>Contact</button>
                             <button>
                                 <div id="themebutton" className={`w-12 h-12 flex flex-col items-center justify-center rounded-full  ${darkTheme? "text-black bg-white": " text-white bg-black "}`} onClick={clickChangeTheme}>

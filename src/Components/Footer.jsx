@@ -2,9 +2,10 @@ import React from 'react'
 import { FaRegCopyright } from "react-icons/fa6";
 import { FaArrowTurnUp } from "react-icons/fa6";
 import { FiGithub } from "react-icons/fi";
-import {ScrollToPlugin} from 'gsap/all';
+import {ScrollToPlugin} from 'gsap/ScrollToPlugin';
 gsap.registerPlugin(ScrollToPlugin);
 import gsap from 'gsap';
+
 export const Footer = () => {
 
     return (
@@ -19,10 +20,10 @@ export const Footer = () => {
                 <button onClick={() => {
                     gsap.to(window, {
                         duration: 1.5,
-                        scrollTo: "#projectsection",
+                        scrollTo: { y: 0},
                         ease: "power2.inOut",
                     });}}
-                 className={'flex flex-row items-center'}> <p className={'mr-2'}>Back To top</p> <FaArrowTurnUp /></button>
+                 className={'flex flex-row items-center cursor-pointer'}> Back To top <FaArrowTurnUp /></button>
             </div>
         </div>
     )
