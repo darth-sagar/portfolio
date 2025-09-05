@@ -1,12 +1,14 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger  } from "gsap/ScrollTrigger";
+import {SplitText} from "gsap/SplitText";
 import navdrive from "../Assets/navdrive.jpg";
 import crypto from "../Assets/vizcrypto.png";
 import prepWise from "../Assets/prepwise.png";
 import {useDarkTheme} from '../Context/Context.jsx';
 import { useGSAP } from "@gsap/react";
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ProjectsSection() {
@@ -14,33 +16,46 @@ export default function ProjectsSection() {
     const sectionRef = useRef();
 
 useGSAP(() => {
+    const split= new SplitText("#heading", {type:" chars"});
+    gsap.from(split.chars, {
+        x: 150,
+        opacity: 0,
+        duration: 1,
+        ease: "power1.inOut",
+        scale: 1.5,
+        scrollTrigger: {
+            trigger: "#heading",
+            start: "40% 50%",
+            end: "50% 20%",
+            scrub: 3,
+        },
+        stagger:0.1,
+    })
     const projectCard = gsap.utils.toArray(sectionRef.current.children);
     projectCard.forEach((card) => {
         gsap.from(card, {
-            x: 200,
-            y: 200,
-            opacity: 0,
+            yPercent: 50,
+            opacity: 0.2,
             duration: 1.5,
             delay: 0.5,
+            scale: 0.9,
             ease: 'power1.inOut',
             scrollTrigger: {
                 trigger: card,
-                start: 'top -80%', // usually "top 80%" works better than "bottom 80%"
-                end: 'top -90%',
-                toggleActions: 'play none none none',
-                scrub: true,
-                markers: true,
+                start: 'bottom 35%',
+                end: 'bottom 5%',
+                scrub: 2,
+                markers: false,
             },
-            stagger: 0.5,
+            stagger: 0.1,
         });
     });
-    gsap.from()
 },{scope: sectionRef});
 
 
     return (
     <>
-        <span className={'text-[#9A9A9B] text-xl uppercase ml-8 mb-10'}>Selected works</span>
+        <span id="heading" className={'text-[#9A9A9B] text-xl uppercase ml-8 mb-10'}>Selected works</span>
         <div className="ml-8 mr-8" ref={sectionRef}>
         {/* Project one */}
         <div className="flex flex-row gap-10 items-center relative project-card">
@@ -79,7 +94,7 @@ useGSAP(() => {
             </div>
 
         {/*project two*/}
-        <div className="flex flex-row gap-10 items-center mt-64 relative project-card">
+        <div className="flex flex-row gap-10 items-center mt-52 relative project-card">
             <section className="flex-1">
                 <span className={`absolute -top-[2.5rem] -left-10 text-[15rem] font-bold text-gray-200/10  z-10 ${darkTheme?"":"text-gray-600/20"}`}>02</span>
                 <h1 className={`text-7xl mb-5 ${darkTheme ? "" : "text-black"}`}>

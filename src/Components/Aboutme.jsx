@@ -6,9 +6,6 @@ import { useDarkTheme } from '../Context/Context.jsx';
 import gsap from 'gsap';
 import {useGSAP} from '@gsap/react';
 import {ScrollTrigger} from 'gsap/all';
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-
-gsap.registerPlugin(ScrollToPlugin);
 gsap.registerPlugin(ScrollTrigger)
 
 
