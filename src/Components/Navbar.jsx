@@ -57,23 +57,29 @@ export const Navbar = () => {
 
     return (
         <>
-            <div id={"navbar"} className={`fixed flex flex-col items-center justify-center h-[16vh] w-full ${
-                scrolled ? " backdrop-blur-md " : "bg-transparent" } z-50`}>
+            <div id={"navbar"} className={`fixed flex flex-col items-center justify-center h-[16vh] ${
+                scrolled ? " backdrop-blur-md " : "bg-transparent" } z-30`}>
                 <nav className={"w-[92vw] h-[10vh] flex items-center justify-between px-4"}>
-                    <div className={`${darkTheme?  "" : "border-black"} bg-white rounded-full w-12 h-12 flex items-center justify-center z-10`}>
-                        <img src={logo} alt="Logo" className="w-10 h-10 " />
+                    <div className={`${darkTheme?  "" : "border-black"} bg-white rounded-full w-12 h-12 flex items-center justify-center z-20`}>
+                        <img src={logo} alt="Logo" className="w-10 h-10" />
                     </div>
-                    <div className={`${darkTheme ? "text-white" : "text-black"} space-x-8 hidden md:flex text-lg`}>
-                        <button>ABOUT</button>
+                    <div className={`${darkTheme ? "text-white" : "text-black"} space-x-8 hidden md:flex text-lg z-20`}>
+                        <button onClick={() => {
+                            gsap.to(window, {
+                                duration: 1,
+                                scrollTo: "#about",
+                                ease: "power2.inOut",
+                            });
+                        }} className={`hover:bg-white/20 transition`}>ABOUT</button>
                         <button>WORK</button>
                         <button>CONTACT</button>
                         <button >
-                            <div  onClick={clickChangeTheme}  className={`${darkTheme ? "bg-white text-black" : "bg-black text-white"} w-12 h-12 flex flex-col items-center justify-center rounded-full text-black z-10`} >
+                            <div onClick={clickChangeTheme}  className={`${darkTheme ? "bg-white text-black" : "bg-black text-white"} w-12 h-12 flex flex-col items-center justify-center rounded-full text-black z-20`} >
                                 {darkTheme? <LuSunDim id="themebutton" /> :<IoMoonOutline id="themebutton" /> }
                             </div>
                         </button>
                     </div>
-                    <button  onClick={clickOpenMenu} className={`${darkTheme?"text-white":"text-black"} md:hidden  button z-20 text-3xl`}>{
+                    <button  onClick={clickOpenMenu} className={`${darkTheme?"text-white":"text-black"} md:hidden button z-20 text-3xl`}>{
                         isOpen? <RxCross2 />  :<GiHamburgerMenu />
                     }
                     </button>
@@ -82,8 +88,7 @@ export const Navbar = () => {
             {
                 isOpen && (
                     <>
-
-                        <div className={ `${darkTheme ? "text-white"  : "text-black" } bg-black/30  md:hidden flex flex-col items-center justify-center space-y-5 w-full h-[100vh] absolute top-0 left-0 z-10`}>
+                        <div className={ `${darkTheme ? "text-white"  : "text-black" } backdrop-blur-md  md:hidden flex flex-col items-center justify-center space-y-5 w-full h-[100vh] fixed top-0 left-0 z-20`}>
                             <button onClick={() => {
                                 gsap.to(window, {
                                     duration: 1,
@@ -94,7 +99,7 @@ export const Navbar = () => {
                             <button>Work</button>
                             <button>Contact</button>
                             <button>
-                                <div id="themebutton" className={'w-12 h-12 flex flex-col items-center justify-center rounded-full text-black bg-white'} onClick={clickChangeTheme}>
+                                <div id="themebutton" className={`w-12 h-12 flex flex-col items-center justify-center rounded-full  ${darkTheme? "text-black bg-white": " text-white bg-black "}`} onClick={clickChangeTheme}>
                                     {darkTheme?<IoMoonOutline id="themebutton" />:<LuSunDim id="themebutton"/>}
                                 </div>
                             </button>

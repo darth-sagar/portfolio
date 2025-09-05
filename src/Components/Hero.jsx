@@ -61,7 +61,7 @@ const Hero = () => {
                 <h1 id={'text'} className={`mt-10 text-xl z-10 ${darkTheme? "" :"text-black"} `}>Building immersive web experiences that push</h1>
                 <h1 id={'text'} className={`text-xl z-10 ${darkTheme? "" :"text-black"} `}>the boundaries of what's possible</h1>
             </div>
-            <div id={"hero"} className={"w-[170%] h-1/2 rotate-6 font-light absolute top-28 space-y-36 text-2xl z-0 md:text-[8rem] md:space-y-8 md:w-[400%] md:top-[15rem] md:h-full"}>
+            <div id={"hero"} className={"w-[170%] h-1/2 rotate-6 font-light absolute top-28 space-y-36 text-2xl md:text-[8rem] md:space-y-8 md:w-[400%] md:top-[15rem] md:h-full z-0"}>
                     <h1 id={"first"} className={`${darkTheme?"":"text-[#E9E9E9]"} text-[#1B1B1B]`}>TypeScript / JavaScript / C++ / Python / Redux / Vercel</h1>
                     <h1 id={"second"} className={`${darkTheme?"":"text-[#E9E9E9]"} text-[#1B1B1B]`} >Node.js / React.js / G-SAP / javascript / Tailwind CSS</h1>
                     <h1 id={"first"} className={`${darkTheme?"":"text-[#E9E9E9]"} text-[#1B1B1B]`} >G-SAP / Three.js / CSS / HTML / Framer Motion / Next.js</h1>
