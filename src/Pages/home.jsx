@@ -6,6 +6,7 @@ import ProjectsSection from '../Components/projects.jsx';
 import {Footer} from '../Components/Footer.jsx';
 import React, {useEffect, useState} from 'react';
 import {useDarkTheme} from '../Context/Context.jsx';
+import Contact from '../Components/contact.jsx';
 
 const Home = () => {
     const { darkTheme } = useDarkTheme();
@@ -24,6 +25,7 @@ const Home = () => {
                 <Hero />
                 {homePage && <Aboutme />}
                 <ProjectsSection />
+                <Contact />
                 <Footer/>
             </div>
         </div>
