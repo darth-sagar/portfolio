@@ -58,8 +58,8 @@ export const Navbar = () => {
     return (
         <>
             <div id={"navbar"} className={`fixed flex flex-col items-center justify-center h-[16vh] ${
-                scrolled ? " backdrop-blur-md " : "bg-transparent" } z-30`}>
-                <nav className={"w-[92vw] h-[10vh] flex items-center justify-between px-4"}>
+                scrolled ? " backdrop-blur-md " : "bg-transparent" } z-30 mr-5`}>
+                <nav className={"w-[98vw] h-[10vh] flex items-center justify-between px-4"}>
                     <div className={`${darkTheme?  "" : "border-black"} bg-white rounded-full w-12 h-12 flex items-center justify-center z-20`}>
                         <img src={logo} alt="Logo" className="w-10 h-10" />
                     </div>
@@ -70,9 +70,39 @@ export const Navbar = () => {
                                 scrollTo: "#about",
                                 ease: "power2.inOut",
                             });
-                        }} className={`hover:bg-white/20 transition`}>ABOUT</button>
-                        <button>WORK</button>
-                        <button>CONTACT</button>
+                        }} className={`hover:scale-x-110 relative
+                              after:content-[''] 
+                              after:absolute 
+                              after:left-0 
+                              after:bottom-[1px] 
+                              after:w-0 
+                              after:h-[2px] 
+                              after:bg-[#FF4D4D] 
+                              after:transition-all 
+                              after:duration-300 
+                              hover:after:w-full`}>ABOUT</button>
+                        <button className={`hover:scale-105 relative
+                              after:content-[''] 
+                              after:absolute 
+                              after:left-0 
+                              after:bottom-[1px] 
+                              after:w-0 
+                              after:h-[2px] 
+                              after:bg-[#FF4D4D] 
+                              after:transition-all 
+                              after:duration-300 
+                              hover:after:w-full`} >WORK</button>
+                        <button className={`hover:scale-105 relative
+                              after:content-[''] 
+                              after:absolute 
+                              after:left-0 
+                              after:bottom-[1px] 
+                              after:w-0 
+                              after:h-[2px] 
+                              after:bg-[#FF4D4D] 
+                              after:transition-all 
+                              after:duration-300 
+                              hover:after:w-full`} >CONTACT</button>
                         <button >
                             <div onClick={clickChangeTheme}  className={`${darkTheme ? "bg-white text-black" : "bg-black text-white"} w-12 h-12 flex flex-col items-center justify-center rounded-full text-black z-20`} >
                                 {darkTheme? <LuSunDim id="themebutton" /> :<IoMoonOutline id="themebutton" /> }
@@ -95,7 +125,17 @@ export const Navbar = () => {
                                     scrollTo: "#about",
                                     ease: "power2.inOut",
                                 });
-                            }} className={`hover:bg-white/20 transition`}>About</button>
+                            }} className={`hover:scale-105 relative
+                              after:content-[''] 
+                              after:absolute 
+                              after:left-0 
+                              after:bottom-[1px] 
+                              after:w-0 
+                              after:h-[2px] 
+                              after:bg-[#FF4D4D] 
+                              after:transition-all 
+                              after:duration-300 
+                              hover:after:w-full`}>About</button>
                             <button>Work</button>
                             <button>Contact</button>
                             <button>

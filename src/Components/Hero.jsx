@@ -1,7 +1,7 @@
 import React from 'react'
 import gsap from 'gsap';
 import {useGSAP} from '@gsap/react';
-import {ScrollTrigger} from 'gsap/all';
+import {ScrollTrigger , SplitText} from 'gsap/all';
 import {useDarkTheme} from '../Context/Context.jsx';
 gsap.registerPlugin(ScrollTrigger)
 
@@ -9,6 +9,7 @@ const Hero = () => {
     const {darkTheme} = useDarkTheme();
 
     useGSAP(()=>{
+
         gsap.to("#first", {
             transform:"translateX(-30%)",
             scrollTrigger:{
@@ -41,14 +42,16 @@ const Hero = () => {
         })
     },[])
     useGSAP(() => {
-        gsap.from("#text", {
+        const headline = new SplitText("#text", {
+            type:"chars, words , lines",
+        })
+        gsap.from(headline.lines, {
             opacity: 0,
-            y: 180,
-            rotateX: -90,
-            duration: 1.2,
-            stagger: 0.25,
-            ease: "back.out(1.7)",
+            yPercent: 100,
+            stagger: 0.05,
+            ease: "power2.in",
             delay: 1.4,
+            duration: 1,
         });
     });
 
