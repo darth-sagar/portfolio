@@ -7,6 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {useGSAP} from '@gsap/react';
 import {SplitText} from 'gsap/SplitText';
 import {useDarkTheme} from '../Context/Context.jsx';
+import emailjs from "emailjs-com";
 gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
@@ -21,9 +22,18 @@ const Contact = () => {
     const mailHandler = ()=>{
         window.open("mailto:work.sagarsaini@gmail.com", "_blank");
     }
-    const formHandler = (e)=>{
+    const sendEmail = (e) => {
         e.preventDefault();
-    }
+        emailjs.sendForm(
+            "service_b6n3b2p",
+            "template_65fyz52",
+            e.target,
+            "pDWFVuOHhR8mxlWup"
+        ).then(
+            (result) => { alert("Message sent! ✅"); },
+            (error) => { alert("Failed to send ❌"); }
+        );
+    };
     useGSAP(()=>{
         const split= new SplitText(".heading2", {type:" chars"});
         gsap.from(split.chars, {
@@ -63,7 +73,7 @@ const Contact = () => {
             ease: 'power1.inOut',
             scrollTrigger: {
                 trigger: '.contact-form',
-                start: '100% -50%',
+                start: '90% -40%',
                 end: '-60%',
                 scrub: 3,
             }
@@ -102,60 +112,26 @@ const Contact = () => {
                 {/* Right section */}
                 <section className="w-full md:w-1/2 contact-form">
                     <div className="flex flex-col w-full">
-                        <form className="flex flex-col gap-5 mx-auto p-6 rounded-2xl w-full">
+                        <form onSubmit={sendEmail} className="flex flex-col gap-5 mx-auto p-6 rounded-2xl w-full">
                             {/* Name */}
                             <div className="relative">
-                                <input
-                                    type="text"
-                                    id="name"
-                                    placeholder=" "
-                                    className="peer w-full px-4 py-3 text-white bg-transparent border border-gray-600 rounded-lg outline-none focus:border-[#FF4D4D] transition-all duration-300 "
-                                />
-                                <label
-                                    htmlFor="name"
-                                    className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 transition-all duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-gray-500 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm peer-focus:text-[#FF4D4D]"
-                                >
-                                    Name*
-                                </label>
+                                <input type="text" id="name" placeholder="Name*" className={`${darkTheme?"text-white" : "text-black"} peer w-full px-4 py-3  bg-transparent border border-gray-600 rounded-lg outline-none focus:border-[#FF4D4D] transition-all duration-300 `}/>
                             </div>
 
                             {/* Email */}
                             <div className="relative">
-                                <input
-                                    type="email"
-                                    id="email"
-                                    placeholder=" "
-                                    className="peer w-full px-4 py-3 text-white bg-transparent border border-gray-600 rounded-lg outline-none focus:border-[#FF4D4D] transition-all duration-300 "
-                                />
-                                <label
-                                    htmlFor="email"
-                                    className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 transition-all duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-gray-500 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm peer-focus:text-[#FF4D4D]"
-                                >
-                                    Email*
-                                </label>
+                                <input type="email" id="email" placeholder="Email*" className={`peer w-full px-4 py-3  bg-transparent border border-gray-600 rounded-lg outline-none focus:border-[#FF4D4D] transition-all duration-300 ${darkTheme?"text-white" : "text-black"}`}/>
+
                             </div>
 
                             {/* Message */}
                             <div className="relative">
-          <textarea
-              id="message"
-              rows="6"
-              placeholder=" "
-              className=" peer w-full px-4 py-3 text-white bg-transparent border border-gray-600 rounded-lg outline-none focus:border-[#FF4D4D] transition-all duration-300 resize-none"
-          />
-                                <label
-                                    htmlFor="message"
-                                    className="absolute left-4 top-6 text-gray-400 transition-all duration-300 peer-placeholder-shown:top-7 peer-placeholder-shown:text-gray-500 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm peer-focus:text-[#FF4D4D]"
-                                >
-                                    Message*
-                                </label>
+                                <textarea id="message" rows="6" placeholder="Message*" className={`${darkTheme?"text-white" : "text-black"} peer w-full px-4 py-3  bg-transparent border border-gray-600 rounded-lg outline-none focus:border-[#FF4D4D] transition-all duration-300 resize-none`}/>
+
                             </div>
 
                             {/* Submit */}
-                            <button
-                                type="submit"
-                                className="group flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-[#FF4D4D] to-[#ff1e56] hover:scale-105 hover:shadow-lg hover:shadow-[#FF4D4D]/50 transition-all duration-300"
-                            >
+                            <button type="submit" className="group flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-[#FF4D4D] to-[#ff1e56] hover:scale-105 hover:shadow-lg hover:shadow-[#FF4D4D]/50 transition-all duration-300">
                                 <span>Send</span>
                                 <FaLongArrowAltRight className="transform group-hover:translate-x-2 transition-transform duration-300" />
                             </button>
@@ -163,7 +139,6 @@ const Contact = () => {
                     </div>
                 </section>
             </div>
-
         </div>
     )
 }
