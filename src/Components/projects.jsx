@@ -3,9 +3,9 @@ import gsap from "gsap";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { ScrollTrigger  } from "gsap/ScrollTrigger";
 import {SplitText} from "gsap/SplitText";
-import navdrive from "../Assets/navdrive.jpg";
-import crypto from "../Assets/vizcrypto.png";
-import prepWise from "../Assets/prepwise.png";
+import navdrive from '../../public/navdrive.jpg'
+import crypto from "../../public/vizcrypto.png";
+import prepWise from "../../public/prepWise.png";
 import {useDarkTheme} from '../Context/Context.jsx';
 import { useGSAP } from "@gsap/react";
 
@@ -148,7 +148,7 @@ export default function ProjectsSection() {
                 <section className="flex-1/3" >
                     <div className="relative group rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500 h-[450px]">
                         <img
-                            src={navdrive}
+                            src='/navdrive.jpg'
                             alt="navdrive"
                             className="rounded-xl object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110"
                         />
@@ -185,7 +185,7 @@ export default function ProjectsSection() {
             <section className="flex-[2]">
                 <div className="relative group rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500 h-[450px]">
                     <img
-                        src={crypto}
+                        src='/vizcrypto.png'
                         alt="navdrive"
                         className="rounded-xl object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110"
                     />
@@ -222,7 +222,7 @@ export default function ProjectsSection() {
             <section className="flex-[2]">
                 <div className="relative group rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500 h-[450px]">
                     <img
-                        src={prepWise}
+                        src='/prepWise.png'
                         alt="navdrive"
                         className="rounded-xl object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110"
                     />
