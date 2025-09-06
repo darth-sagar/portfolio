@@ -24,9 +24,10 @@ useGSAP(() => {
         scale: 1.5,
         scrollTrigger: {
             trigger: ".heading",
-            start: "40% 50%",
-            end: "50% 20%",
+            start: "40% 80%",
+            end: "40% 50%",
             scrub: 3,
+            markers: false,
         },
         stagger:0.08,
     })
@@ -58,9 +59,10 @@ useGSAP(() => {
             ease: 'power1.inOut',
             scrollTrigger: {
                 trigger: card,
-                start: 'top 0%',
+                start: 'top -5%',
                 end: 'bottom -10%',
                 scrub: 3,
+                markers:false,
 
             },
             stagger:0.2,
@@ -78,6 +80,7 @@ useGSAP(() => {
                 start: 'top 0%',
                 end: 'bottom -10%',
                 scrub: 3,
+
             },
             stagger:0.2,
             duration: 0.6,

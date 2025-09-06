@@ -98,7 +98,14 @@ export const Navbar = () => {
                               after:transition-all 
                               after:duration-300 
                               hover:after:w-full`} >WORK</button>
-                        <button className={`hover:scale-105 relative
+                        <button onClick={() => {
+                            gsap.to(window, {
+                                duration: 1,
+                                scrollTo: { y: "#contact", autoKill: true },
+                                ease: "power2.inOut",
+                            });
+                        }}
+                                className={`hover:scale-105 relative
                               after:content-[''] 
                               after:absolute 
                               after:left-0 
