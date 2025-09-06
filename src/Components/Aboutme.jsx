@@ -6,7 +6,9 @@ import { useDarkTheme } from '../Context/Context.jsx';
 import gsap from 'gsap';
 import {useGSAP} from '@gsap/react';
 import {ScrollTrigger} from 'gsap/all';
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
+gsap.registerPlugin(ScrollToPlugin);
 gsap.registerPlugin(ScrollTrigger)
 
 
@@ -156,8 +158,20 @@ const Aboutme = () => {
                 <h4>With a passion for building complete web solutions, I bring together clean UI design, efficient backend logic, and emerging AI/ML capabilities to create smart, adaptable, and user-focused applications</h4>
             </div>
             <div id={"fourthdiv"} className={` ${darkTheme? "" :"text-black"} mt-8`}>
-                <button className={`rounded-xl bg-[#FF4D4D] p-4 mr-5 border-2 border-amber-50 ${darkTheme? "border-amber-50":"border-black "} transform transition duration-300 ease-in-out hover:scale-104 hover:-translate-y-2 backdrop-blur-md shadow-md`}>Get In Touch</button>
-                <button className={'rounded-xl bg-transparent p-4 border-2 border-[#FF4D4D] transform transition duration-300 ease-in-out hover:scale-104 hover:-translate-y-2 backdrop-blur-md shadow-md'} >View Projects</button>
+                <button onClick={()=>{
+                    gsap.to(window, {
+                        duration: 1.5,
+                        scrollTo: { y: "#contact", autoKill: true },
+                        ease: "power2.inOut",
+                    })
+                }} className={`rounded-xl bg-[#FF4D4D] p-4 mr-5 border-2 border-amber-50 ${darkTheme? "border-amber-50":"border-black "} transform transition duration-300 ease-in-out hover:scale-104 hover:-translate-y-2 backdrop-blur-md shadow-md`}>Get In Touch</button>
+                <button onClick={()=>{
+                    gsap.to(window, {
+                        duration: 1.5,
+                        scrollTo: { y: "#projectsection", autoKill: true },
+                        ease: "power2.inOut",
+                    })
+                }} className={'rounded-xl bg-transparent p-4 border-2 border-[#FF4D4D] transform transition duration-300 ease-in-out hover:scale-104 hover:-translate-y-2 backdrop-blur-md shadow-md'} >View Projects</button>
             </div>
         </div>
 

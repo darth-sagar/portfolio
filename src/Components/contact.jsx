@@ -1,6 +1,6 @@
 import React from 'react'
 import { CiLinkedin, CiMail  } from "react-icons/ci";
-import { FaDiscord, FaGithub } from "react-icons/fa";
+import {  FaGithub } from "react-icons/fa";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -12,6 +12,18 @@ gsap.registerPlugin(ScrollTrigger);
 const Contact = () => {
     const {darkTheme}= useDarkTheme();
 
+    const githubHandler = ()=>{
+        window.open("https://github.com/darth-sagar", "_blank");
+    }
+    const linkedinHandler = ()=>{
+        window.open("https://www.linkedin.com/in/sagar-saini-621b8a307/", "_blank");
+    }
+    const mailHandler = ()=>{
+        window.open("mailto:work.sagarsaini@gmail.com", "_blank");
+    }
+    const formHandler = (e)=>{
+        e.preventDefault();
+    }
     useGSAP(()=>{
         const split= new SplitText(".heading2", {type:" chars"});
         gsap.from(split.chars, {
@@ -81,10 +93,9 @@ const Contact = () => {
                 <section className="w-full md:w-1/2 contact-buttons">
                     <h1 className={`text-4xl ${darkTheme?"text-white":"text-black" } `}>Connect With Me</h1>
                     <div className="flex flex-row items-start space-x-5 mt-10">
-                        <button className="bg-black text-5xl border-2 rounded-xl p-2 hover:scale-125 duration-300 "> <FaGithub/> </button>
-                        <button className="bg-black text-5xl border-2 rounded-xl p-2 hover:scale-125 duration-300 "> <FaDiscord/> </button>
-                        <button className="bg-black text-5xl border-2 rounded-xl p-2 hover:scale-125 duration-300  "> <CiLinkedin /> </button>
-                        <button className="bg-black text-5xl border-2 rounded-xl p-2 hover:scale-125 duration-300 "> <CiMail /> </button>
+                        <button onClick={githubHandler} className="bg-black text-5xl border-2 rounded-xl p-2 hover:scale-125 duration-300 "> <FaGithub/> </button>
+                        <button onClick={linkedinHandler} className="bg-black text-5xl border-2 rounded-xl p-2 hover:scale-125 duration-300  "> <CiLinkedin /> </button>
+                        <button onClick={mailHandler} className="bg-black text-5xl border-2 rounded-xl p-2 hover:scale-125 duration-300 "> <CiMail /> </button>
                     </div>
                 </section>
 

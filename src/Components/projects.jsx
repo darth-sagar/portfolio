@@ -14,7 +14,22 @@ gsap.registerPlugin(ScrollTrigger);
 export default function ProjectsSection() {
     const {darkTheme}= useDarkTheme();
     const sectionRef = useRef();
-useGSAP(() => {
+    const projectOneHandler =()=>{
+        window.open("https://github.com/darth-sagar/NavDrive", "_blank");
+    }
+    const projectTwoHandler =()=>{
+        window.open("https://github.com/darth-sagar/crypto-visualiser", "_blank");
+    }
+    const projectTwoLiveHandler = ()=>{
+        window.open("https://crypto-visualiser-seven.vercel.app/", "_blank");
+    }
+    const projectThreeHandler = ()=>{
+        window.open("https://github.com/darth-sagar/hireMe-Al", "_blank");
+    }
+    const projectThreeLiveHandler = ()=>{
+        window.open("https://github.com/darth-sagar/hireMe-Al", "_blank");
+    }
+    useGSAP(() => {
     const split= new SplitText(".heading", {type:" chars"});
     gsap.from(split.chars, {
         x: 150,
@@ -105,6 +120,7 @@ useGSAP(() => {
 },{scope: sectionRef});
 
 
+
     return (
     <>
         <span id="projectsection" className={'text-[#9A9A9B] text-xl uppercase ml-8 heading mb-40'}>Selected works</span>
@@ -124,7 +140,7 @@ useGSAP(() => {
                         <h1 className={`bg-[#FF4D4D]/10 rounded-full project pt-2 pb-2 px-4 shadow-md cursor-pointer ${darkTheme ? "" :"bg-[#FF4D4D]/40"}`}>OpenCV</h1>
                         <h1 className={`bg-[#FF4D4D]/10 rounded-full project pt-2 pb-2 px-4 shadow-md cursor-pointer ${darkTheme ? "" :"bg-[#FF4D4D]/40"}`}>Tensorflow</h1>
                     </div>
-                    <button className={`flex flex-row items-center px-6 py-3 rounded-2xl transform transition hover:scale-x-105 hover:-translate-y-2 duration-500 ${darkTheme ? "bg-white text-black" : "bg-black text-white"}`}>
+                    <button onClick={projectOneHandler } className={`flex flex-row items-center px-6 py-3 rounded-2xl transform transition hover:scale-x-105 hover:-translate-y-2 duration-500 ${darkTheme ? "bg-white text-black" : "bg-black text-white"}`}>
                         <p className="pr-2">View Project</p>
                         <FaLongArrowAltRight />
                     </button>
@@ -137,7 +153,7 @@ useGSAP(() => {
                             className="rounded-xl object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <button className="px-4 py-2 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-gray-200 transition">
+                            <button onClick={projectOneHandler } className="px-4 py-2 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-gray-200 transition">
                                 View Project
                             </button>
                         </div>
@@ -161,7 +177,7 @@ useGSAP(() => {
                     <h1 className={`bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer ${darkTheme ? "" :"bg-[#FF4D4D]/40"}`}>Google Charts</h1>
                     <h1 className={`bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer ${darkTheme ? "" :"bg-[#FF4D4D]/40"}`}>JavaScript</h1>
                 </div>
-                <button className={`flex flex-row items-center px-6 py-3 rounded-2xl transform transition hover:-translate-y-2 hover:scale-105 duration-500 ${darkTheme ? "bg-white text-black" : "bg-black text-white"} `}>
+                <button onClick={projectTwoHandler} className={`flex flex-row items-center px-6 py-3 rounded-2xl transform transition hover:-translate-y-2 hover:scale-105 duration-500 ${darkTheme ? "bg-white text-black" : "bg-black text-white"} `}>
                     <p className="pr-2">View Project</p>
                     <FaLongArrowAltRight />
                 </button>
@@ -174,7 +190,7 @@ useGSAP(() => {
                         className="rounded-xl object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <button className={`px-4 py-2 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-gray-200 transition `}>
+                        <button onClick={projectTwoLiveHandler} className={`px-4 py-2 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-gray-200 transition `}>
                             View Project
                         </button>
                     </div>
@@ -198,7 +214,7 @@ useGSAP(() => {
                     <h1 className={`projectThree bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer ${darkTheme ? "" :"bg-[#FF4D4D]/40"}`}>Firebase</h1>
                     <h1 className={`projectThree bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer ${darkTheme ? "" :"bg-[#FF4D4D]/40"}`}>Gemini API</h1>
                 </div>
-                <button className={`flex flex-row items-center border-2  px-6 py-3 rounded-2xl transform transition hover:-translate-y-2 hover:scale-105 duration-500 ${darkTheme ? "bg-white text-black" : "bg-black text-white"}`}>
+                <button onClick={projectThreeHandler} className={`flex flex-row items-center border-2  px-6 py-3 rounded-2xl transform transition hover:-translate-y-2 hover:scale-105 duration-500 ${darkTheme ? "bg-white text-black" : "bg-black text-white"}`}>
                     <p className="pr-2">View Project</p>
                     <FaLongArrowAltRight />
                 </button>
@@ -211,7 +227,7 @@ useGSAP(() => {
                         className="rounded-xl object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <button className="px-4 py-2 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-gray-200 transition">
+                        <button onClick={projectThreeLiveHandler} className="px-4 py-2 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-gray-200 transition">
                             Coming Soon
                         </button>
                     </div>
