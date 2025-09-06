@@ -3,9 +3,6 @@ import gsap from "gsap";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { ScrollTrigger  } from "gsap/ScrollTrigger";
 import {SplitText} from "gsap/SplitText";
-import navdrive from '../../public/navdrive.jpg'
-import crypto from "../../public/vizcrypto.png";
-import prepWise from "../../public/prepWise.png";
 import {useDarkTheme} from '../Context/Context.jsx';
 import { useGSAP } from "@gsap/react";
 
