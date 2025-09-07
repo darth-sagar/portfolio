@@ -90,6 +90,7 @@ const Contact = () => {
             }
         })
     })
+
     return (
         <div id="contact" className={`mr-8 ml-8 mt-52 mb-40 max-w-svw `}>
             <span className={'text-[#9A9A9B] text-xl uppercase ml-8 mb-10 heading2 mt-52'} >get in touch</span>

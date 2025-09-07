@@ -116,14 +116,12 @@ export default function ProjectsSection() {
     })
 },{scope: sectionRef});
 
-
-
     return (
-    <>
-        <span id="projectsection" className={'text-[#9A9A9B] text-xl uppercase ml-8 heading mb-40'}>Selected works</span>
-        <div className="ml-8 mr-8" ref={sectionRef}>
+    <div className={`relative`}>
+        <span id="projectsection" className={' absolute md:top-[-5rem] text-[#9A9A9B] text-xl uppercase ml-8 heading mb-40'}>Selected works</span>
+        <div className="ml-8 mr-8 " ref={sectionRef}>
         {/* Project one */}
-        <div className="flex flex-row gap-10 items-center relative project-card">
+        <div className="flex flex-col md:flex-row gap-10 items-center relative project-card">
                 <section className="flex-1" >
                     <span className={`project absolute -top-[3.5rem] -left-10 text-[15rem] font-bold text-gray-200/10  z-10 ${darkTheme?"":"text-gray-600/20"}`}>01</span>
                     <h1 className={`project text-7xl mb-5 ${darkTheme ? "" : "text-black"}`}>Navdrive</h1>
@@ -159,7 +157,7 @@ export default function ProjectsSection() {
             </div>
 
         {/*project two*/}
-        <div className="flex flex-row gap-10 items-center mt-52 relative project-card">
+        <div className="flex flex-col md:flex-row gap-10 items-center mt-52 relative project-card">
             <section className="flex-1">
                 <span className={`projectTwo absolute -top-[2.5rem] -left-10 text-[15rem] font-bold text-gray-200/10  z-10 ${darkTheme?"":"text-gray-600/20"}`}>02</span>
                 <h1 className={`projectTwo text-7xl mb-5 ${darkTheme ? "" : "text-black"}`}>
@@ -196,7 +194,7 @@ export default function ProjectsSection() {
         </div>
 
         {/*project Three*/}
-        <div className="flex flex-row gap-10 items-center mt-64 project-card">
+        <div className="flex flex-col md:flex-row gap-10 items-center mt-64 project-card">
             <section className="flex-1 relative">
                 <span className={`projectThree absolute -top-[6rem] -left-10 text-[15rem] font-bold text-gray-200/10  z-10 ${darkTheme?"":"text-gray-600/20"}`}>03</span>
                 <h1 className={`projectThree text-7xl mb-5 ${darkTheme ? "" : "text-black"}`}>
@@ -232,6 +230,6 @@ export default function ProjectsSection() {
             </section>
         </div>
         </div>
-    </>
+    </div>
     );
 }

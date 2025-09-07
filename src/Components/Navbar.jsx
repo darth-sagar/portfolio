@@ -156,7 +156,13 @@ export const Navbar = () => {
                                     ease: "power2.inOut",
                                 });
                             }} >Work</button>
-                            <button>Contact</button>
+                            <button  onClick={() => {
+                                gsap.to(window, {
+                                    duration: 1,
+                                    scrollTo: { y: "#contact", autoKill: true },
+                                    ease: "power2.inOut",
+                                });
+                            }} >Contact</button>
                             <button>
                                 <div id="themebutton" className={`w-12 h-12 flex flex-col items-center justify-center rounded-full  ${darkTheme? "text-black bg-white": " text-white bg-black "}`} onClick={clickChangeTheme}>
                                     {darkTheme?<IoMoonOutline id="themebutton" />:<LuSunDim id="themebutton"/>}

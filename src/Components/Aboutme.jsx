@@ -78,8 +78,8 @@ const Aboutme = () => {
                 trigger:"#skills1 h1",
                 scroller:"body",
                 scrub:3,
-                start:"top 90%",
-                end:"top 80%",
+                start:"top 80%",
+                end:"top 50%",
             },
             ease:"power1.inOut",
             stagger:1,
@@ -92,7 +92,7 @@ const Aboutme = () => {
                 trigger:"#skills2 h1",
                 scroller:"body",
                 scrub:3,
-                start:"top 90%",
+                start:"top 98%",
                 end:"top 80%",
             },
             ease:"power1.inOut",
@@ -143,10 +143,9 @@ const Aboutme = () => {
     },[])
     return (
 
-        <div id="about" className={'flex flex-col md:flex-row mt-40 mb-52'}>
-        <div className={'h-svh ml-8 mr-4 w-svw flex flex-col md:ml-48 md:mt-20 md:w-5/12'}>
+        <div id="about" className={'flex flex-col md:flex-row md:mt-40 mb-52'}>
+        <div className={'h-svh ml-8 mr-4 w-svw/90 flex flex-col md:ml-48 md:mt-20 md:w-5/12'}>
             <div id={"namediv"}>
-
                 <h1 className={`${darkTheme ? "text-amber-100" : "text-black" } text-5xl `}>Hi, I'm</h1>
                 <h1 className={'text-5xl text-[#FF4D4D] '}>Sagar saini</h1>
             </div>
@@ -174,22 +173,21 @@ const Aboutme = () => {
                 }} className={'rounded-xl bg-transparent p-4 border-2 border-[#FF4D4D] transform transition duration-300 ease-in-out hover:scale-104 hover:-translate-y-2 backdrop-blur-md shadow-md'} >View Projects</button>
             </div>
         </div>
-
-        <div className={'mt-30'}>
-            <h1 id = {"fifthdiv"} className={`text-2xl mb-5 ${darkTheme ? "":"text-black"}`}>Key Skills</h1>
-            <div id={'skills1'} className={`flex flex-row space-x-2 text-[1.2rem] ${darkTheme? "" :"text-black"} `}>
+        <div className={'md:mt-30 relative ml-8'}>
+            <h1 id = {"fifthdiv"} className={`absolute top-[-5rem] text-2xl md:mb-5 ${darkTheme ? "":"text-black"}`}>Key Skills</h1>
+            <div id={'skills1'} className={`flex flex-row items-center space-x-2 text-[13px] md:text-[1.2rem] ${darkTheme? "" :"text-black"} `}>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer '}>HTML</h1>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer  '} >CSS</h1>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer '} >Tailwind CSS</h1>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer '} >JavaScript</h1>
             </div>
-            <div id={'skills2'} className={`flex flex-row space-x-2 text-[1.2rem] mt-2 ${darkTheme? "" :"text-black"}`}>
+            <div id={'skills2'} className={`flex flex-row items-center space-x-2 text-[13px] md:text-[1.2rem] mt-2 ${darkTheme? "" :"text-black"}`}>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer '} >TypeScript</h1>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer '} >React</h1>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer '} >Next.js</h1>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer '} >Node.Js</h1>
             </div>
-            <div id={'skills3'} className={`flex flex-row space-x-2 text-[1.2rem] mt-2 ${darkTheme? "" :"text-black"}`}>
+            <div id={'skills3'} className={`flex flex-row items-center space-x-2 text-[13px] md:text-[1.2rem] mt-2 ${darkTheme? "" :"text-black"}`}>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer '} >MongoDB</h1>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer '}>MySQL</h1>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer '} >Python</h1>
