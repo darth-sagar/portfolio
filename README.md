@@ -9,7 +9,7 @@ A modern, animated developer portfolio built with React, Vite, Tailwind CSS, and
 - Smooth, scroll-driven animations with GSAP and ScrollTrigger
 - Large, editorial-style project sections
 - Dark/light theme support via React Context
-- Responsive layout with Tailwind CSS **(not yet working on it)**
+- Responsive layout with Tailwind CSS
 - Project cards with hover effects and external links
 - Fast builds and local dev via Vite
 - Linting with ESLint
