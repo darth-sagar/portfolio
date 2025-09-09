@@ -1,10 +1,10 @@
-# 🌟 Portfolio Website
+#  Portfolio Website
 
 A modern, animated developer portfolio built with React, Vite, Tailwind CSS, and GSAP. It features smooth scroll-based animations, a dark/light theme, and a curated selection of projects with live previews and repository links.
 
 ---
 
-## ✨ Features
+## Features
 
 - Smooth, scroll-driven animations with GSAP and ScrollTrigger
 - Large, editorial-style project sections
@@ -30,7 +30,7 @@ A modern, animated developer portfolio built with React, Vite, Tailwind CSS, and
 ---
 
 
-## 📸 Screenshots
+## Screenshots
 
 ### 🔹 Home Page
 ![Home Screenshot](./public/screenshots/s1.png)
@@ -40,7 +40,7 @@ A modern, animated developer portfolio built with React, Vite, Tailwind CSS, and
 
 ___
 
-## 🖥️ Setup & Installation
+##  Setup & Installation
 
 1. Clone the repo
    ```bash
@@ -64,9 +64,9 @@ ___
     ```
 ---
 
-## 📬 Contact Me
+## Contact Me
 
 Email me at:
-👉 [Email](emailto:sagarsaini9531@gmail.com)
+[Email](emailto:sagarsaini9531@gmail.com)
 
 ---
