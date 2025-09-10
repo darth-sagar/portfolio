@@ -17,7 +17,7 @@ A modern, animated developer portfolio built with React, Vite, Tailwind CSS, and
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Vite** – Build tool
 - **React.js** – Frontend framework
@@ -32,10 +32,10 @@ A modern, animated developer portfolio built with React, Vite, Tailwind CSS, and
 
 ## Screenshots
 
-### 🔹 Home Page
+### Home Page
 ![Home Screenshot](./public/screenshots/s1.png)
 
-### 🔹 Projects Section
+### Projects Section
 ![Projects Screenshot](./public/screenshots/s2.png)
 
 ___
