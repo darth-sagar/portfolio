@@ -174,11 +174,11 @@ const Aboutme = () => {
             </div>
         </div>
         <div className={'md:mt-30 relative ml-8'}>
-            <h1 id = {"fifthdiv"} className={`absolute top-[-5rem] text-2xl md:mb-5 ${darkTheme ? "":"text-black"}`}>Key Skills</h1>
+            <h1 id = {"fifthdiv"} className={`absolute top-[-4rem] text-2xl md:mb-5 ${darkTheme ? "":"text-black"}`}>Key Skills</h1>
             <div id={'skills1'} className={`flex flex-row items-center space-x-2 text-[13px] md:text-[1.2rem] ${darkTheme? "" :"text-black"} `}>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer '}>HTML</h1>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer  '} >CSS</h1>
-                <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer '} >Tailwind CSS</h1>
+                <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer '} >Tailwind</h1>
                 <h1 className={'bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer '} >JavaScript</h1>
             </div>
             <div id={'skills2'} className={`flex flex-row items-center space-x-2 text-[13px] md:text-[1.2rem] mt-2 ${darkTheme? "" :"text-black"}`}>
