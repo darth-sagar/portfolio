@@ -60,7 +60,7 @@ export default function ProjectsSection() {
                     start: 'bottom 35%',
                     end: 'bottom 15%',
                     scrub: 2,
-                    markers: true,
+                    markers: false,
                 },
                 stagger: 0.1,
             });
@@ -134,7 +134,6 @@ export default function ProjectsSection() {
             },
             stagger:0.08,
         })
-
         const projectCard = gsap.utils.toArray(sectionRef.current.children);
         projectCard.forEach((card) => {
             gsap.from(card, {
@@ -154,7 +153,6 @@ export default function ProjectsSection() {
                 stagger: 0.1,
             });
         });
-
         const projectOneSplit= gsap.utils.toArray('.project');
         projectOneSplit.forEach((card) => {
             gsap.from(card, {
@@ -173,7 +171,6 @@ export default function ProjectsSection() {
                 duration: 0.1,
             })
         })
-
         const projectTwoSplit= gsap.utils.toArray('.projectTwo');
         projectTwoSplit.forEach((card) => {
             gsap.from(card, {
@@ -200,10 +197,10 @@ export default function ProjectsSection() {
                 ease: 'power1.inOut',
                 scrollTrigger: {
                     trigger: card,
-                    start: '50% 22%',
-                    end: '50% 8%',
+                    start: '50% 25%',
+                    end: '50% 10%',
                     scrub: 3,
-                    markers: true,
+                    markers: false,
                 },
                 stagger:0.2,
                 duration: 0.6,

@@ -35,75 +35,137 @@ const Contact = () => {
         );
     };
     useGSAP(()=>{
-        const split= new SplitText(".heading2", {type:" chars"});
-        gsap.from(split.chars, {
-            x: 150,
-            opacity: 0,
-            duration: 1.4,
-            ease: "power1.inOut",
-            scale: 1.5,
-            scrollTrigger: {
-                trigger: ".heading2",
-                start: "40% -30%",
-                end: "40% -40%",
-                scrub: 3,
+        const mm = gsap.matchMedia();
+        mm.add("(min-width: 768px)", () => {
+            const split= new SplitText(".heading2", {type:" chars"});
+            gsap.from(split.chars, {
+                x: 150,
+                opacity: 0,
+                duration: 1.4,
+                ease: "power1.inOut",
+                scale: 1.5,
+                scrollTrigger: {
+                    trigger: ".heading2",
+                    start: "40% -30%",
+                    end: "40% -40%",
+                    scrub: 3,
 
-            },
-            stagger:0.08,
-        })
-        const contactHeading = gsap.utils.toArray('.contact-heading');
-        contactHeading.forEach((card) => {
-            gsap.from(card, {
-                y: -100,
+                },
+                stagger:0.08,
+            })
+            const contactHeading = gsap.utils.toArray('.contact-heading');
+            contactHeading.forEach((card) => {
+                gsap.from(card, {
+                    y: -100,
+                    opacity: 0.2,
+                    ease: 'power1.inOut',
+                    scrollTrigger: {
+                        trigger: card,
+                        start: 'top -50%',
+                        end: 'bottom -60%',
+                        markers:false,
+                        scrub: 3,
+                    },
+                    stagger:0.1,
+                })
+            })
+            gsap.from('.contact-form', {
+                x: -100,
                 opacity: 0.2,
                 ease: 'power1.inOut',
                 scrollTrigger: {
-                    trigger: card,
-                    start: 'top -50%',
-                    end: 'bottom -60%',
-                    markers:false,
+                    trigger: '.contact-form',
+                    start: '90% -40%',
+                    end: '-60%',
                     scrub: 3,
-                },
-                stagger:0.1,
+                }
+            })
+            gsap.from('.contact-buttons', {
+                x: 100,
+                opacity: 0.2,
+                ease: 'power1.inOut',
+                scrollTrigger: {
+                    trigger: '.contact-form input',
+                    start: '110% -50%',
+                    end: '-60%',
+                    scrub: 3,
+                }
             })
         })
-        gsap.from('.contact-form', {
-            x: -100,
-            opacity: 0.2,
-            ease: 'power1.inOut',
-            scrollTrigger: {
-                trigger: '.contact-form',
-                start: '90% -40%',
-                end: '-60%',
-                scrub: 3,
-            }
-        })
-        gsap.from('.contact-buttons', {
-            x: 100,
-            opacity: 0.2,
-            ease: 'power1.inOut',
-            scrollTrigger: {
-                trigger: '.contact-form input',
-                start: '110% -50%',
-                end: '-60%',
-                scrub: 3,
-            }
+        mm.add("(max-width: 767px)", () => {
+            const split= new SplitText(".heading2", {type:" chars"});
+            gsap.from(split.chars, {
+                x: 150,
+                opacity: 0,
+                duration: 1.4,
+                ease: "power1.inOut",
+                scale: 1.5,
+                scrollTrigger: {
+                    trigger: ".heading2",
+                    start: "60% 20%",
+                    end: "10% 10%",
+                    scrub: 4,
+                    markers:false,
+
+                },
+                stagger:0.08,
+            })
+
+            const contactHeading = gsap.utils.toArray('.contact-heading');
+            contactHeading.forEach((card) => {
+                gsap.from(card, {
+                    x: -100,
+                    opacity: 0.2,
+                    ease: 'power1.inOut',
+                    scrollTrigger: {
+                        trigger: card,
+                        start: '50% 20%',
+                        end: '10% 10%',
+                        markers:false,
+                        scrub: 3,
+                    },
+                    stagger:0.1,
+                })
+            })
+            gsap.from('.contact-form', {
+                y: -150,
+                opacity: 0,
+                ease: 'power1.inOut',
+                scrollTrigger: {
+                    trigger: '.contact-form',
+                    start: '50% 25%',
+                    end: '10% 10%',
+                    scrub: 3,
+                }
+            })
+            gsap.from('.contact-buttons', {
+                x: -100,
+                opacity: 0,
+                ease: 'power1.inOut',
+                scrollTrigger: {
+                    trigger: '.contact-form input',
+                    start: '50% 25%',
+                    end: '10% 10%',
+                    markers:false,
+                    scrub: 3,
+                }
+            })
         })
     })
 
     return (
-        <div id="contact" className={`mr-8 ml-8 mt-12 md:mt-52 mb-40 max-w-svw `}>
+        <div id="contact" className={`mr-8 ml-8 mt-12 md:mt-52 mb-16 max-w-svw `}>
             <span className={'text-[#9A9A9B] text-xl uppercase ml-8 mb-10 heading2 mt-52'} >get in touch</span>
             <div className={`flex flex-col md:flex-col items-center justify-center mb-10 contact-heading`}>
-                <h1 className={`lg:text-6xl mt-32 contact-heading ${darkTheme?"text-white":"text-black" }`}>Let's Create Something Together</h1>
-                <h1 className={`mt-5 contact-heading ${darkTheme?"text-white":"text-black" } `}>Have a project in mind? Let's bring your ideas to life. I'm currently available for</h1>
+                <h1 className={`lg:text-6xl mt-32 text-[1.4rem] contact-heading ${darkTheme?"text-white":"text-black" }`}>Let's Create Something Together</h1>
+                <h1 className={`hidden md:block mt-5 contact-heading md:text-2xl ${darkTheme?"text-white":"text-black" } `}>Have a project in mind? Let's bring your ideas to life. I'm currently available for</h1>
                 <h1 className={`mb-10 contact-heading ${darkTheme?"text-white":"text-black" }`}>freelance projects and collaborations.</h1>
             </div>
             <div className="flex flex-col md:flex-row w-full gap-10 items-center">
                 {/* Left section */}
-                <section className="w-full md:w-1/2 contact-buttons">
+                <section className="w-full md:w-1/2 contact-buttons flex flex-col items-center md:items-start">
                     <h1 className={`text-xl md:text-4xl ${darkTheme?"text-white":"text-black" } `}>Connect With Me</h1>
-                    <div className="flex flex-row items-start space-x-5 mt-10">
+                    <div className="flex flex-row md:items-start space-x-5 mt-10">
                         <button onClick={githubHandler} className="bg-black text-5xl border-2 rounded-xl p-2 hover:scale-125 duration-300 "> <FaGithub/> </button>
                         <button onClick={linkedinHandler} className="bg-black text-5xl border-2 rounded-xl p-2 hover:scale-125 duration-300  "> <CiLinkedin /> </button>
                         <button onClick={mailHandler} className="bg-black text-5xl border-2 rounded-xl p-2 hover:scale-125 duration-300 "> <CiMail /> </button>
