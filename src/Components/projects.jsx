@@ -237,6 +237,7 @@ export default function ProjectsSection() {
                 <section className="flex-1/3" >
                     <div className="relative group rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500 md:h-[450px]">
                         <img
+                            loading={`lazy`}
                             src='/navdrive.jpg'
                             alt="navdrive"
                             className="rounded-xl object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110"
@@ -274,6 +275,7 @@ export default function ProjectsSection() {
             <section className="flex-[2]">
                 <div className="relative group rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500 md:h-[450px]">
                     <img
+                        loading={`lazy`}
                         src='/vizcrypto.png'
                         alt="navdrive"
                         className="rounded-xl object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110"
@@ -311,6 +313,7 @@ export default function ProjectsSection() {
             <section className="flex-[2]">
                 <div className="relative group rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500 md:h-[450px]">
                     <img
+                        loading={`lazy`}
                         src='/prepWise.png'
                         alt="navdrive"
                         className="rounded-xl object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110"
