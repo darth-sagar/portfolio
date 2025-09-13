@@ -117,14 +117,14 @@ export default function ProjectsSection() {
 },{scope: sectionRef});
 
     return (
-    <div className={`relative`}>
-        <span id="projectsection" className={' absolute md:top-[-5rem] text-[#9A9A9B] text-xl uppercase ml-8 heading mb-40'}>Selected works</span>
+    <div id="projectsection" className={`relative`}>
+        <span  className={' absolute top-10 md:top-[-5rem] text-[#9A9A9B] text-xl uppercase ml-8 heading md:mb-40'}>Selected works</span>
         <div className="ml-8 mr-8 " ref={sectionRef}>
         {/* Project one */}
         <div className="flex flex-col md:flex-row gap-10 items-center relative project-card">
                 <section className="flex-1" >
                     <span className={`project absolute -top-[3.5rem] -left-10 text-[15rem] font-bold text-gray-200/10  z-10 ${darkTheme?"":"text-gray-600/20"}`}>01</span>
-                    <h1 className={`project text-7xl mb-5 ${darkTheme ? "" : "text-black"}`}>Navdrive</h1>
+                    <h1 className={`project text-5xl md:text-7xl mb-5 ${darkTheme ? "" : "text-black"}`}>Navdrive</h1>
                     <p className="text-[#9A9A9A] project">
                         A self-driving car powered by Raspberry Pi, sensors, and a machine learning model for intelligent navigation
                     </p>
@@ -141,7 +141,7 @@ export default function ProjectsSection() {
                     </button>
                 </section>
                 <section className="flex-1/3" >
-                    <div className="relative group rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500 h-[450px]">
+                    <div className="relative group rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500 md:h-[450px]">
                         <img
                             src='/navdrive.jpg'
                             alt="navdrive"
@@ -160,7 +160,7 @@ export default function ProjectsSection() {
         <div className="flex flex-col md:flex-row gap-10 items-center mt-52 relative project-card">
             <section className="flex-1">
                 <span className={`projectTwo absolute -top-[2.5rem] -left-10 text-[15rem] font-bold text-gray-200/10  z-10 ${darkTheme?"":"text-gray-600/20"}`}>02</span>
-                <h1 className={`projectTwo text-7xl mb-5 ${darkTheme ? "" : "text-black"}`}>
+                <h1 className={`projectTwo text-5xl md:text-7xl mb-5 ${darkTheme ? "" : "text-black"}`}>
                     VizCrypto</h1>
                 <p className="text-[#9A9A9A] projectTwo ">
                     An interactive web-based crypto visualizer platform built using React and the CoinGecko API
@@ -178,7 +178,7 @@ export default function ProjectsSection() {
                 </button>
             </section>
             <section className="flex-[2]">
-                <div className="relative group rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500 h-[450px]">
+                <div className="relative group rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500 md:h-[450px]">
                     <img
                         src='/vizcrypto.png'
                         alt="navdrive"
@@ -197,7 +197,7 @@ export default function ProjectsSection() {
         <div className="flex flex-col md:flex-row gap-10 items-center mt-64 project-card">
             <section className="flex-1 relative">
                 <span className={`projectThree absolute -top-[6rem] -left-10 text-[15rem] font-bold text-gray-200/10  z-10 ${darkTheme?"":"text-gray-600/20"}`}>03</span>
-                <h1 className={`projectThree text-7xl mb-5 ${darkTheme ? "" : "text-black"}`}>
+                <h1 className={`projectThree text-5xl md:text-7xl mb-5 ${darkTheme ? "" : "text-black"}`}>
                     HireMe-AI</h1>
                 <p className="text-[#9A9A9A] projectThree">
                     An AI-driven platform designed to help users prepare for interviews, offering coding practice and resources for both technical and non-technical roles
@@ -215,7 +215,7 @@ export default function ProjectsSection() {
                 </button>
             </section>
             <section className="flex-[2]">
-                <div className="relative group rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500 h-[450px]">
+                <div className="relative group rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500 md:h-[450px]">
                     <img
                         src='/prepWise.png'
                         alt="navdrive"

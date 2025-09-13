@@ -92,17 +92,17 @@ const Contact = () => {
     })
 
     return (
-        <div id="contact" className={`mr-8 ml-8 mt-52 mb-40 max-w-svw `}>
+        <div id="contact" className={`mr-8 ml-8 mt-12 md:mt-52 md:mb-40 max-w-svw `}>
             <span className={'text-[#9A9A9B] text-xl uppercase ml-8 mb-10 heading2 mt-52'} >get in touch</span>
-            <div className={`flex flex-row md:flex-col items-center justify-center mb-10 contact-heading`}>
-                <h1 className={`text-6xl mt-32 contact-heading ${darkTheme?"text-white":"text-black" }`}>Let's Create Something Together</h1>
-                <h1 className={`mt-5 contact-heading ${darkTheme?"text-white":"text-black" } `}>Have a project in mind? Let's bring your ideas to life. I'm currently available for </h1>
+            <div className={`flex flex-col md:flex-col items-center justify-center mb-10 contact-heading`}>
+                <h1 className={`lg:text-6xl mt-32 contact-heading ${darkTheme?"text-white":"text-black" }`}>Let's Create Something Together</h1>
+                <h1 className={`mt-5 contact-heading ${darkTheme?"text-white":"text-black" } `}>Have a project in mind? Let's bring your ideas to life. I'm currently available for</h1>
                 <h1 className={`mb-10 contact-heading ${darkTheme?"text-white":"text-black" }`}>freelance projects and collaborations.</h1>
             </div>
             <div className="flex flex-col md:flex-row w-full gap-10 items-center">
                 {/* Left section */}
                 <section className="w-full md:w-1/2 contact-buttons">
-                    <h1 className={`text-4xl ${darkTheme?"text-white":"text-black" } `}>Connect With Me</h1>
+                    <h1 className={`text-xl md:text-4xl ${darkTheme?"text-white":"text-black" } `}>Connect With Me</h1>
                     <div className="flex flex-row items-start space-x-5 mt-10">
                         <button onClick={githubHandler} className="bg-black text-5xl border-2 rounded-xl p-2 hover:scale-125 duration-300 "> <FaGithub/> </button>
                         <button onClick={linkedinHandler} className="bg-black text-5xl border-2 rounded-xl p-2 hover:scale-125 duration-300  "> <CiLinkedin /> </button>
