@@ -127,9 +127,9 @@ export default function ProjectsSection() {
             scale: 1.5,
             scrollTrigger: {
                 trigger: ".heading",
-                start: "40% 80%",
-                end: "40% 50%",
-                scrub: 3,
+                start: "40% 90%",
+                end: "40% 70%",
+                scrub: 4,
                 markers: false,
             },
             stagger:0.08,
@@ -146,14 +146,15 @@ export default function ProjectsSection() {
                 ease: 'power1.inOut',
                 scrollTrigger: {
                     trigger: card,
-                    start: 'bottom 45%',
-                    end: 'bottom 25%',
+                    start: 'bottom 65%',
+                    end: 'bottom 45%',
                     scrub: 2,
-                    markers: true,
+                    markers: false,
                 },
                 stagger: 0.1,
             });
         });
+
         const projectOneSplit= gsap.utils.toArray('.project');
         projectOneSplit.forEach((card) => {
             gsap.from(card, {
@@ -162,8 +163,8 @@ export default function ProjectsSection() {
                 ease: 'power1.inOut',
                 scrollTrigger: {
                     trigger: card,
-                    start: 'top -5%',
-                    end: 'bottom -10%',
+                    start: '50% 20%',
+                    end: '50% 5%',
                     scrub: 3,
                     markers:false,
 
@@ -172,6 +173,7 @@ export default function ProjectsSection() {
                 duration: 0.1,
             })
         })
+
         const projectTwoSplit= gsap.utils.toArray('.projectTwo');
         projectTwoSplit.forEach((card) => {
             gsap.from(card, {
@@ -180,9 +182,10 @@ export default function ProjectsSection() {
                 ease: 'power1.inOut',
                 scrollTrigger: {
                     trigger: card,
-                    start: 'top 0%',
-                    end: 'bottom -10%',
+                    start: '50% 20%',
+                    end: '50% 5%',
                     scrub: 3,
+                    markers: false,
 
                 },
                 stagger:0.2,
@@ -197,9 +200,10 @@ export default function ProjectsSection() {
                 ease: 'power1.inOut',
                 scrollTrigger: {
                     trigger: card,
-                    start: 'top 0%',
-                    end: 'bottom -10%',
+                    start: '50% 22%',
+                    end: '50% 8%',
                     scrub: 3,
+                    markers: true,
                 },
                 stagger:0.2,
                 duration: 0.6,
@@ -209,8 +213,8 @@ export default function ProjectsSection() {
 },{scope: sectionRef});
 
     return (
-    <div id="projectsection" className={`relative mt-52`}>
-        <span  className={' absolute top-24 md:top-[-5rem] text-[#9A9A9B] text-xl uppercase ml-8 heading md:mb-40'}>Selected works</span>
+    <div id="projectsection" className={`md:relative mt-52 mb-32`}>
+        <span  className={' md:absolute top-24 md:top-[-5rem] text-[#9A9A9B] text-xl uppercase ml-8 heading md:mb-40'}>Selected works</span>
         <div className="ml-8 mr-8 " ref={sectionRef}>
         {/* Project one */}
         <div className="flex flex-col md:flex-row gap-10 items-center relative project-card">
