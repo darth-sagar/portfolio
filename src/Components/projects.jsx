@@ -27,98 +27,190 @@ export default function ProjectsSection() {
         window.open("https://github.com/darth-sagar/hireMe-Al", "_blank");
     }
     useGSAP(() => {
-    const split= new SplitText(".heading", {type:" chars"});
-    gsap.from(split.chars, {
-        x: 150,
-        opacity: 0,
-        duration: 1.4,
-        ease: "power1.inOut",
-        scale: 1.5,
-        scrollTrigger: {
-            trigger: ".heading",
-            start: "40% 80%",
-            end: "40% 50%",
-            scrub: 3,
-            markers: false,
-        },
-        stagger:0.08,
-    })
-
-    const projectCard = gsap.utils.toArray(sectionRef.current.children);
-    projectCard.forEach((card) => {
-        gsap.from(card, {
-            yPercent: 50,
-            opacity: 0.2,
-            duration: 1.5,
-            delay: 0.5,
-            scale: 0.9,
-            ease: 'power1.inOut',
+    const mm = gsap.matchMedia();
+    mm.add("( min-width: 768px )", () => {
+        const split= new SplitText(".heading", {type:" chars"});
+        gsap.from(split.chars, {
+            x: 150,
+            opacity: 0,
+            duration: 1.4,
+            ease: "power1.inOut",
+            scale: 1.5,
             scrollTrigger: {
-                trigger: card,
-                start: 'bottom 35%',
-                end: 'bottom 5%',
-                scrub: 2,
+                trigger: ".heading",
+                start: "40% 80%",
+                end: "40% 50%",
+                scrub: 3,
                 markers: false,
             },
-            stagger: 0.1,
+            stagger:0.08,
+        })
+
+        const projectCard = gsap.utils.toArray(sectionRef.current.children);
+        projectCard.forEach((card) => {
+            gsap.from(card, {
+                yPercent: 50,
+                opacity: 0.2,
+                duration: 1.5,
+                delay: 0.5,
+                scale: 0.9,
+                ease: 'power1.inOut',
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'bottom 35%',
+                    end: 'bottom 15%',
+                    scrub: 2,
+                    markers: true,
+                },
+                stagger: 0.1,
+            });
         });
-    });
-    const projectOneSplit= gsap.utils.toArray('.project');
-    projectOneSplit.forEach((card) => {
-        gsap.from(card, {
-            x: -100,
-            opacity: 0.2,
-            ease: 'power1.inOut',
-            scrollTrigger: {
-                trigger: card,
-                start: 'top -5%',
-                end: 'bottom -10%',
-                scrub: 3,
-                markers:false,
+        const projectOneSplit= gsap.utils.toArray('.project');
+        projectOneSplit.forEach((card) => {
+            gsap.from(card, {
+                x: -100,
+                opacity: 0.2,
+                ease: 'power1.inOut',
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top -5%',
+                    end: 'bottom -10%',
+                    scrub: 3,
+                    markers:false,
 
-            },
-            stagger:0.2,
-            duration: 0.1,
+                },
+                stagger:0.2,
+                duration: 0.1,
+            })
+        })
+        const projectTwoSplit= gsap.utils.toArray('.projectTwo');
+        projectTwoSplit.forEach((card) => {
+            gsap.from(card, {
+                x: -100,
+                opacity: 0.2,
+                ease: 'power1.inOut',
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 0%',
+                    end: 'bottom -10%',
+                    scrub: 3,
+
+                },
+                stagger:0.2,
+                duration: 0.6,
+            })
+        })
+        const projectThreeSplit= gsap.utils.toArray('.projectThree');
+        projectThreeSplit.forEach((card) => {
+            gsap.from(card, {
+                x: -100,
+                opacity: 0.2,
+                ease: 'power1.inOut',
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 0%',
+                    end: 'bottom -10%',
+                    scrub: 3,
+                },
+                stagger:0.2,
+                duration: 0.6,
+            })
         })
     })
-    const projectTwoSplit= gsap.utils.toArray('.projectTwo');
-    projectTwoSplit.forEach((card) => {
-        gsap.from(card, {
-            x: -100,
-            opacity: 0.2,
-            ease: 'power1.inOut',
+    mm.add("( max-width: 767px )", () => {
+        const split= new SplitText(".heading", {type:" chars"});
+        gsap.from(split.chars, {
+            x: 150,
+            opacity: 0,
+            duration: 1.4,
+            ease: "power1.inOut",
+            scale: 1.5,
             scrollTrigger: {
-                trigger: card,
-                start: 'top 0%',
-                end: 'bottom -10%',
+                trigger: ".heading",
+                start: "40% 80%",
+                end: "40% 50%",
                 scrub: 3,
-
+                markers: false,
             },
-            stagger:0.2,
-            duration: 0.6,
+            stagger:0.08,
         })
-    })
-    const projectThreeSplit= gsap.utils.toArray('.projectThree');
-    projectThreeSplit.forEach((card) => {
-        gsap.from(card, {
-            x: -100,
-            opacity: 0.2,
-            ease: 'power1.inOut',
-            scrollTrigger: {
-                trigger: card,
-                start: 'top 0%',
-                end: 'bottom -10%',
-                scrub: 3,
-            },
-            stagger:0.2,
-            duration: 0.6,
+
+        const projectCard = gsap.utils.toArray(sectionRef.current.children);
+        projectCard.forEach((card) => {
+            gsap.from(card, {
+                yPercent: 50,
+                opacity: 0.2,
+                duration: 1.5,
+                delay: 0.5,
+                scale: 0.9,
+                ease: 'power1.inOut',
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'bottom 45%',
+                    end: 'bottom 25%',
+                    scrub: 2,
+                    markers: true,
+                },
+                stagger: 0.1,
+            });
+        });
+        const projectOneSplit= gsap.utils.toArray('.project');
+        projectOneSplit.forEach((card) => {
+            gsap.from(card, {
+                x: -100,
+                opacity: 0.2,
+                ease: 'power1.inOut',
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top -5%',
+                    end: 'bottom -10%',
+                    scrub: 3,
+                    markers:false,
+
+                },
+                stagger:0.2,
+                duration: 0.1,
+            })
+        })
+        const projectTwoSplit= gsap.utils.toArray('.projectTwo');
+        projectTwoSplit.forEach((card) => {
+            gsap.from(card, {
+                x: -100,
+                opacity: 0.2,
+                ease: 'power1.inOut',
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 0%',
+                    end: 'bottom -10%',
+                    scrub: 3,
+
+                },
+                stagger:0.2,
+                duration: 0.6,
+            })
+        })
+        const projectThreeSplit= gsap.utils.toArray('.projectThree');
+        projectThreeSplit.forEach((card) => {
+            gsap.from(card, {
+                x: -100,
+                opacity: 0.2,
+                ease: 'power1.inOut',
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 0%',
+                    end: 'bottom -10%',
+                    scrub: 3,
+                },
+                stagger:0.2,
+                duration: 0.6,
+            })
         })
     })
 },{scope: sectionRef});
 
     return (
-    <div id="projectsection" className={`relative`}>
-        <span  className={' absolute top-10 md:top-[-5rem] text-[#9A9A9B] text-xl uppercase ml-8 heading md:mb-40'}>Selected works</span>
+    <div id="projectsection" className={`relative mt-52`}>
+        <span  className={' absolute top-24 md:top-[-5rem] text-[#9A9A9B] text-xl uppercase ml-8 heading md:mb-40'}>Selected works</span>
         <div className="ml-8 mr-8 " ref={sectionRef}>
         {/* Project one */}
         <div className="flex flex-col md:flex-row gap-10 items-center relative project-card">

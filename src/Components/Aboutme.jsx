@@ -143,7 +143,7 @@ const Aboutme = () => {
     },[])
     return (
 
-        <div id="about" className={'flex flex-col md:flex-row md:mt-40 mb-32'}>
+        <div id="about" className={'flex flex-col md:flex-row md:mt-52 md:mb-32'}>
         <div className={'h-svh/10 ml-8 mr-4 w-svw/90 flex flex-col md:ml-48 md:mt-20 md:w-5/12'}>
             <div id={"namediv"}>
                 <h1 className={`${darkTheme ? "text-amber-100" : "text-black" } text-5xl `}>Hi, I'm</h1>
