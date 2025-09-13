@@ -153,7 +153,7 @@ const Aboutme = () => {
                 <p className={'flex flex-row items-center'}><CiLocationOn className={'text-[#FF4D4D]'}/><p className={`pl-2 ${darkTheme? "" :"text-black"}`}>Based In Delhi, India</p> </p>
                 <p className={'flex flex-row items-center'} ><IoIosCode className={'text-[#FF4D4D]'} /> <p className={`pl-2 ${darkTheme? "" :"text-black"} `}>Full Stack Developer </p> </p>
             </div>
-            <div id={"thirddiv"} className={`w-1/2 pt-3 ${darkTheme? "" :"text-black"}`}>
+            <div id={"thirddiv"} className={`md:w-1/2 pt-3 ${darkTheme? "" :"text-black"}`}>
                 <h4>With a passion for building complete web solutions, I bring together clean UI design, efficient backend logic, and emerging AI/ML capabilities to create smart, adaptable, and user-focused applications</h4>
             </div>
             <div id={"fourthdiv"} className={` ${darkTheme? "" :"text-black"} mt-8`}>
