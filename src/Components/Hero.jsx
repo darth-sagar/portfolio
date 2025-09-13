@@ -30,6 +30,7 @@ const Hero = () => {
                     },
                 });
             },
+
             "(max-width: 1024px)": function () {
                 gsap.to("#first", {
                     xPercent: -30,
@@ -64,8 +65,8 @@ const Hero = () => {
             type: "chars, words, lines",
         });
         gsap.from(headline.lines, {
-            opacity: 0,
             yPercent: 100,
+            opacity: 0,
             stagger: 0.05,
             ease: "power2.in",
             delay: 1.4,
@@ -74,7 +75,7 @@ const Hero = () => {
     }, []);
 
     return (
-        <div className={'h-svh overflow-y-hidden overflow-x-hidden md:h-svh relative'}>
+        <div className={'h-svh md:h-svh relative'}>
             <div className={`flex flex-col justify-center align-middle items-center h-svh`}>
                 <h1 id={'text'} className={`md:text-5xl lg:text-8xl text-2xl z-10 ${darkTheme? "" :"text-black"}`}>Crafting Digital Experiences</h1>
                 <h1 id={'text'} className={`md:text-5xl lg:text-8xl text-2xl z-10 mb-10 ${darkTheme? "" :"text-black"} `}>Through Code & Design</h1>

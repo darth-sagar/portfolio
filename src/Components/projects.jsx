@@ -39,7 +39,7 @@ export default function ProjectsSection() {
             scrollTrigger: {
                 trigger: ".heading",
                 start: "40% 80%",
-                end: "40% 50%",
+                end: "40% 70%",
                 scrub: 3,
                 markers: false,
             },
@@ -73,7 +73,7 @@ export default function ProjectsSection() {
                 ease: 'power1.inOut',
                 scrollTrigger: {
                     trigger: card,
-                    start: 'top -5%',
+                    start: '50% -5%',
                     end: 'bottom -10%',
                     scrub: 3,
                     markers:false,
@@ -210,6 +210,7 @@ export default function ProjectsSection() {
 },{scope: sectionRef});
 
     return (
+
     <div id="projectsection" className={`md:relative mt-52 mb-32`}>
         <span  className={' md:absolute top-24 md:top-[-5rem] text-[#9A9A9B] text-xl uppercase ml-8 heading md:mb-40'}>Selected works</span>
         <div className="ml-8 mr-8 " ref={sectionRef}>

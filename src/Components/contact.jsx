@@ -30,10 +30,11 @@ const Contact = () => {
             e.target,
             "pDWFVuOHhR8mxlWup"
         ).then(
-            (result) => { alert("Message sent! ✅"); },
-            (error) => { alert("Failed to send ❌"); }
+            (result) => { alert("Message sent!"); },
+            (error) => { alert("Failed to send "); }
         );
     };
+
     useGSAP(()=>{
         const mm = gsap.matchMedia();
         mm.add("(min-width: 768px)", () => {
@@ -49,46 +50,47 @@ const Contact = () => {
                     start: "40% -30%",
                     end: "40% -40%",
                     scrub: 3,
-
                 },
                 stagger:0.08,
             })
             const contactHeading = gsap.utils.toArray('.contact-heading');
             contactHeading.forEach((card) => {
                 gsap.from(card, {
-                    y: -100,
+                    x: -100,
                     opacity: 0.2,
                     ease: 'power1.inOut',
                     scrollTrigger: {
                         trigger: card,
-                        start: 'top -50%',
-                        end: 'bottom -60%',
+                        start: '60% 20%',
+                        end: '0% 0%',
                         markers:false,
                         scrub: 3,
                     },
-                    stagger:0.1,
+                    stagger:0.08,
                 })
             })
             gsap.from('.contact-form', {
                 x: -100,
-                opacity: 0.2,
+                opacity: 0,
                 ease: 'power1.inOut',
                 scrollTrigger: {
                     trigger: '.contact-form',
-                    start: '90% -40%',
-                    end: '-60%',
+                    start: '60% 0%',
+                    end: '70%',
                     scrub: 3,
+                    markers:false,
                 }
             })
             gsap.from('.contact-buttons', {
                 x: 100,
-                opacity: 0.2,
+                opacity: 0,
                 ease: 'power1.inOut',
                 scrollTrigger: {
-                    trigger: '.contact-form input',
-                    start: '110% -50%',
-                    end: '-60%',
+                    trigger: '.contact-buttons',
+                    start: '60% 0%',
+                    end: '70%',
                     scrub: 3,
+                    markers:false,
                 }
             })
         })
@@ -157,12 +159,11 @@ const Contact = () => {
         <div id="contact" className={`mr-8 ml-8 mt-12 md:mt-52 mb-16 max-w-svw `}>
             <span className={'text-[#9A9A9B] text-xl uppercase ml-8 mb-10 heading2 mt-52'} >get in touch</span>
             <div className={`flex flex-col md:flex-col items-center justify-center mb-10 contact-heading`}>
-                <h1 className={`lg:text-6xl mt-32 text-[1.4rem] contact-heading ${darkTheme?"text-white":"text-black" }`}>Let's Create Something Together</h1>
+                <h1 className={`lg:text-6xl mt-32 text-[1.2rem] contact-heading ${darkTheme?"text-white":"text-black" }`}>Let's Create Something Together</h1>
                 <h1 className={`hidden md:block mt-5 contact-heading md:text-2xl ${darkTheme?"text-white":"text-black" } `}>Have a project in mind? Let's bring your ideas to life. I'm currently available for</h1>
                 <h1 className={`mb-10 contact-heading ${darkTheme?"text-white":"text-black" }`}>freelance projects and collaborations.</h1>
             </div>
             <div className="flex flex-col md:flex-row w-full gap-10 items-center">
-                {/* Left section */}
                 <section className="w-full md:w-1/2 contact-buttons flex flex-col items-center md:items-start">
                     <h1 className={`text-xl md:text-4xl ${darkTheme?"text-white":"text-black" } `}>Connect With Me</h1>
                     <div className="flex flex-row md:items-start space-x-5 mt-10">
@@ -171,29 +172,18 @@ const Contact = () => {
                         <button onClick={mailHandler} className="bg-black text-5xl border-2 rounded-xl p-2 hover:scale-125 duration-300 "> <CiMail /> </button>
                     </div>
                 </section>
-
-                {/* Right section */}
                 <section className="w-full md:w-1/2 contact-form">
                     <div className="flex flex-col w-full">
                         <form onSubmit={sendEmail} className="flex flex-col gap-5 mx-auto p-6 rounded-2xl w-full">
-                            {/* Name */}
                             <div className="relative">
                                 <input type="text" id="name" placeholder="Name*" className={`${darkTheme?"text-white" : "text-black"} peer w-full px-4 py-3  bg-transparent border border-gray-600 rounded-lg outline-none focus:border-[#FF4D4D] transition-all duration-300 `}/>
                             </div>
-
-                            {/* Email */}
                             <div className="relative">
                                 <input type="email" id="email" placeholder="Email*" className={`peer w-full px-4 py-3  bg-transparent border border-gray-600 rounded-lg outline-none focus:border-[#FF4D4D] transition-all duration-300 ${darkTheme?"text-white" : "text-black"}`}/>
-
                             </div>
-
-                            {/* Message */}
                             <div className="relative">
                                 <textarea id="message" rows="6" placeholder="Message*" className={`${darkTheme?"text-white" : "text-black"} peer w-full px-4 py-3  bg-transparent border border-gray-600 rounded-lg outline-none focus:border-[#FF4D4D] transition-all duration-300 resize-none`}/>
-
                             </div>
-
-                            {/* Submit */}
                             <button type="submit" className="group flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-[#FF4D4D] to-[#ff1e56] hover:scale-105 hover:shadow-lg hover:shadow-[#FF4D4D]/50 transition-all duration-300">
                                 <span>Send</span>
                                 <FaLongArrowAltRight className="transform group-hover:translate-x-2 transition-transform duration-300" />
