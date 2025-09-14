@@ -59,7 +59,7 @@ export const Navbar = () => {
         <>
             <div id={"top"} className={`fixed flex flex-col items-center justify-center h-16 md:h-[13vh] ${
                 scrolled ? " backdrop-blur-md " : `bg-transparent` } z-30 md:w-full w-svw`}>
-                <nav className={"w-[90vw] h-[10vh] flex items-center justify-between px-4"}>
+                <nav className={"w-[90svw] h-[10vh] flex items-center justify-between px-4"}>
                     <div className={`${darkTheme?  "" : "border-black"} bg-white rounded-full w-12 h-12 flex items-center justify-center z-20`}>
                         <img src={logo} alt="Logo" className="w-10 h-10" />
                     </div>

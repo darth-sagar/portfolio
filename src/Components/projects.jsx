@@ -222,7 +222,7 @@ export default function ProjectsSection() {
                     <p className="text-[#9A9A9A] project">
                         A self-driving car powered by Raspberry Pi, sensors, and a machine learning model for intelligent navigation
                     </p>
-                    <div className={`project flex flex-row flex-wrap gap-3 mt-5 mb-10 ${darkTheme ? "" : "text-black"}`} >
+                    <div className={`project flex flex-row flex-wrap gap-3 mt-5 mb-5 md:mb-10 ${darkTheme ? "" : "text-black"}`} >
                         <h1 className={`bg-[#FF4D4D]/10 rounded-full project pt-2 pb-2 px-4 shadow-md cursor-pointer ${darkTheme ? "" :"bg-[#FF4D4D]/40"}`}>Raspberry Pi</h1>
                         <h1 className={`bg-[#FF4D4D]/10 rounded-full project pt-2 pb-2 px-4 shadow-md cursor-pointer ${darkTheme ? "" :"bg-[#FF4D4D]/40"}`}>Arduino</h1>
                         <h1 className={`bg-[#FF4D4D]/10 rounded-full project pt-2 pb-2 px-4 shadow-md cursor-pointer ${darkTheme ? "" :"bg-[#FF4D4D]/40"}`}>Python</h1>
@@ -260,7 +260,7 @@ export default function ProjectsSection() {
                 <p className="text-[#9A9A9A] projectTwo ">
                     An interactive web-based crypto visualizer platform built using React and the CoinGecko API
                 </p>
-                <div className={`projectTwo flex flex-row flex-wrap gap-3 mt-5 mb-10 ${darkTheme ? "" : "text-black"}`}>
+                <div className={`projectTwo flex flex-row flex-wrap gap-3 mt-5 mb-5 md:mb-10 ${darkTheme ? "" : "text-black"}`}>
                     <h1 className={`bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer ${darkTheme ? "" :"bg-[#FF4D4D]/40"}`}>React</h1>
                     <h1 className={`bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer ${darkTheme ? "" :"bg-[#FF4D4D]/40"}`}>CoinGecko API</h1>
                     <h1 className={`bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer ${darkTheme ? "" :"bg-[#FF4D4D]/40"}`}>Tailwind CSS</h1>
@@ -298,7 +298,7 @@ export default function ProjectsSection() {
                 <p className="text-[#9A9A9A] projectThree">
                     An AI-driven platform designed to help users prepare for interviews, offering coding practice and resources for both technical and non-technical roles
                 </p>
-                <div className={`projectThree flex flex-row flex-wrap gap-3 mt-5 mb-10 ${darkTheme ? "" : "text-black"}`}>
+                <div className={`projectThree flex flex-row flex-wrap gap-3 mt-5 mb-5 md:mb-10 ${darkTheme ? "" : "text-black"}`}>
                     <h1 className={`projectThree bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer ${darkTheme ? "" :"bg-[#FF4D4D]/40"}`}>NextJS</h1>
                     <h1 className={`projectThree bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer ${darkTheme ? "" :"bg-[#FF4D4D]/40"}`}>TypeScript</h1>
                     <h1 className={`projectThree bg-[#FF4D4D]/10 rounded-full pt-2 pb-2 px-4 shadow-md cursor-pointer ${darkTheme ? "" :"bg-[#FF4D4D]/40"}`}>Tailwind CSS</h1>

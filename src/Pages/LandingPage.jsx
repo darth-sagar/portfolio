@@ -30,7 +30,7 @@ const LandingPage = () => {
 
   return (
       <>
-    <div id={'landingPage'} className={`w-svw h-svh flex justify-center items-center absolute top-0 left-0 bg-[#0A0A0A] overflow-hidden`} >
+    <div id={'landingPage'} className={`w-svw h-svh flex justify-center items-center absolute top-0 left-0 bg-[#0A0A0A] overflow-x-hidden`} >
       <div className={`left-bar h-full w-1 bg-[#FF4D4D] relative right-[140px] rotate-6`}></div>
       <div className={`left-bar h-full w-1 bg-[#FF4D4D] relative right-[40px] rotate-6 md:right-[40px]`}></div>
       <div >

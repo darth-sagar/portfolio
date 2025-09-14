@@ -135,9 +135,10 @@ const Contact = () => {
                 ease: 'power1.inOut',
                 scrollTrigger: {
                     trigger: '.contact-form',
-                    start: '50% 25%',
-                    end: '10% 10%',
+                    start: '110% 15%',
+                    end: '120% 0%',
                     scrub: 3,
+                    delay:0.2,
                 }
             })
             gsap.from('.contact-buttons', {
@@ -145,11 +146,12 @@ const Contact = () => {
                 opacity: 0,
                 ease: 'power1.inOut',
                 scrollTrigger: {
-                    trigger: '.contact-form input',
-                    start: '50% 25%',
-                    end: '10% 10%',
+                    trigger: '.contact-buttons',
+                    start: '110% 15%',
+                    end: '120% 0%',
                     markers:false,
                     scrub: 3,
+                    delay:0.2,
                 }
             })
         })
